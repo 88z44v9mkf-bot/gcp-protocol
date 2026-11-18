@@ -2,7 +2,7 @@
 
 ### 8.1 Tasks
 
-ACB contains 60 tasks across four domains: parts (15), merchandise (15), after-sales service (15), and insurance/vehicle reservation (15). Each task specifies a user intent, a budget, a vehicle context where relevant, and three offers. The offers are constructed so that one is valid, one is a near-miss (cheaper but incompatible, unauthorized, out of stock, or safety-critical without OEM approval), and one is over budget or from an unauthorized merchant. Some tasks include an exception: out-of-stock, service-slot conflict, or underwriting rejection.
+ACB contains 60 tasks across four domains: parts (15), merchandise (15), after-sales service (15), and insurance/vehicle reservation (15). Each task specifies a user intent, a budget, a vehicle context where relevant (three anonymized OEM profiles), and three offers. The offers are constructed so that one is valid, one is a near-miss (cheaper but incompatible, unauthorized, out of stock, or safety-critical without OEM approval), and one is over budget or from an unauthorized merchant. Some tasks include an exception: out-of-stock, service-slot conflict, or underwriting rejection.
 
 Table 5 shows the structure. The traps are hidden in C0/C1 and visible in C2 because GCP exposes compatibility, safety, authorization, and inventory fields.
 

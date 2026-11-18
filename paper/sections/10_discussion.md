@@ -18,11 +18,11 @@ The authorization ladder is a practical answer to the trust problem. A user can 
 
 ### 10.5 Limitations
 
-<b>Simulated commerce.</b> The benchmark uses synthetic offers and a simulator, not live merchant systems. The payment rails are specified but not exercised with real money in this paper; a real-money sandbox is the natural next step.
+<b>Simulated commerce.</b> The benchmark uses synthetic offers and a simulator, not live merchant systems. Payments were exercised in Stripe test mode (180 charges, no live money); a live-money field pilot is the natural next step.
 
 <b>Human baseline.</b> Human error and time are modeled, not measured with human subjects. The parameters are plausible but not universal; Appendix C reports sensitivity. A controlled human study is future work.
 
-<b>Single OEM context.</b> The protocol is designed to be industry-wide, but the benchmark reflects one OEM's catalog structure. Cross-OEM and cross-border catalogs may require additional fields (homologation, tax, language).
+<b>OEM and category coverage.</b> The benchmark uses three anonymized OEM profiles, and the semi-field check covers a real merchandise catalog rather than a multi-OEM automotive catalog. Cross-OEM and cross-border catalogs may require additional fields (homologation, tax, language); a multi-OEM field study is future work.
 
 <b>Model coverage.</b> Three models from one endpoint are tested; results may differ with other model families or agent scaffolds.
 
