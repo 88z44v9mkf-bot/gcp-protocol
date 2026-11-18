@@ -1,0 +1,9 @@
+## 11. Conclusion
+
+Personal agents are becoming commercial actors, and the first generation of agent-commerce protocols is arriving. Those protocols solve the general case. Automotive and mobility commerce is not the general case: it is constrained by vehicle compatibility, safety rules, authorized service networks, insurance underwriting, and high-value deposits. A protocol that ignores these constraints can complete a transaction but cannot prevent a wrong or unsafe one.
+
+This paper proposed GCP 1.0: an open, safety-aware, payment-agnostic commerce protocol for automotive and mobility agents. GCP adds vehicle context and safety gates, a revocable authorization ladder, a payment-intent abstraction, typed exceptions with recovery, and a compatibility layer for Poppy, UCP, and ACP. We specified the protocol, released a reference implementation and conformance suite, and built AutomotiveCommerce-Bench to measure whether the protocol actually changes outcomes.
+
+The experiments show where the protocol matters: success rises from 64.5% and 69.4% to 92.2%; misbuy falls from 35.5% and 30.6% to 7.8%; exception recovery rises from about 58% to 89.6%; and the gain is concentrated in service and insurance, where constraints are hidden in ordinary web pages. The human comparison shows the trade-off the protocol is designed to manage: agents can be faster and more consistent, but only if the constraints are visible; humans can notice what the protocol does not encode, but slowly and unreliably. GCP's contribution is to move the enforceable constraints into the protocol, so that the agent's speed does not come at the cost of the user's safety or trust.
+
+The protocol is released as a draft for industry review. The next steps are a real-money sandbox, a multi-OEM field pilot, and standardization through an open foundation.

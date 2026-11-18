@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Verifiable Incentives</title>
+<style>/* Academic preprint stylesheet — single column, A4, Times-like */
+@page {
+  size: A4;
+  margin: 21mm 21mm 22mm 21mm;
+}
+
+html { font-size: 10.4pt; }
+
+body {
+  font-family: "Times New Roman", "Times", "Nimbus Roman", serif;
+  font-size: 10.4pt;
+  line-height: 1.40;
+  color: #111;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  margin: 0;
+}
+
+h1.title {
+  font-size: 18pt;
+  line-height: 1.22;
+  text-align: center;
+  font-weight: 700;
+  margin: 0 0 10pt 0;
+  letter-spacing: 0.2pt;
+}
+
+.authors { text-align: center; font-size: 12pt; margin-top: 6pt; }
+.affil { text-align: center; font-size: 10pt; color: #222; margin-top: 2pt; }
+.email { text-align: center; font-size: 9.5pt; font-family: "Times New Roman", serif; margin-top: 2pt; }
+.date { text-align: center; font-size: 9.5pt; color: #333; margin-top: 8pt; margin-bottom: 10pt; }
+
+.abstractbox {
+  border-top: 1.2pt solid #222;
+  border-bottom: 1.2pt solid #222;
+  padding: 8pt 18pt 6pt 18pt;
+  margin: 10pt 26pt 12pt 26pt;
+}
+.abstractbox h2 { font-size: 10.5pt; text-align: center; letter-spacing: 1pt; border: none; margin: 0 0 4pt 0; padding: 0; }
+.abstractbox p { font-size: 9.9pt; margin: 0; }
+
+.keywords { margin: 0 26pt 14pt 26pt; font-size: 9.5pt; text-align: left; }
+
+h2 {
+  font-size: 12.6pt;
+  font-weight: 700;
+  margin: 15pt 0 5pt 0;
+  page-break-after: avoid;
+}
+h3 {
+  font-size: 10.9pt;
+  font-weight: 700;
+  margin: 11pt 0 3pt 0;
+  page-break-after: avoid;
+}
+h4 { font-size: 10.4pt; font-weight: 700; font-style: italic; margin: 8pt 0 2pt 0; page-break-after: avoid; }
+
+p { margin: 0 0 6pt 0; orphans: 2; widows: 2; }
+
+ul, ol { margin: 2pt 0 6pt 0; padding-left: 18pt; }
+li { margin: 0 0 2.5pt 0; }
+
+b { font-weight: 700; }
+i { font-style: italic; }
+
+blockquote {
+  margin: 7pt 14pt 8pt 14pt;
+  padding: 6pt 10pt;
+  background: #f5f5f2;
+  border-left: 2.2pt solid #555;
+  font-size: 9.9pt;
+}
+
+code { font-family: "Menlo", "Courier New", monospace; font-size: 9pt; }
+
+pre.code {
+  font-family: "Menlo", "Courier New", monospace;
+  font-size: 8.4pt;
+  line-height: 1.32;
+  background: #f7f7f4;
+  border: 0.6pt solid #ccc;
+  padding: 7pt 9pt;
+  white-space: pre-wrap;
+  page-break-inside: avoid;
+  margin: 6pt 0 8pt 0;
+}
+
+.eq {
+  text-align: center;
+  margin: 7pt 0 8pt 0;
+  font-size: 10.2pt;
+  page-break-inside: avoid;
+}
+
+.tblwrap { page-break-inside: avoid; break-inside: avoid; }
+
+.tblcap { font-size: 9pt; text-align: left; margin: 9pt 0 3pt 0; line-height: 1.3; }
+
+ table.tbl {
+  border-collapse: collapse;
+  margin: 8pt auto 10pt auto;
+  font-size: 8.3pt;
+  line-height: 1.25;
+  width: 100%;
+  page-break-inside: avoid;
+  table-layout: auto;
+}
+table.tbl th, table.tbl td { hyphens: none; -webkit-hyphens: none; text-align: left; }
+table.tbl th { vertical-align: bottom; }
+table.tbl td { vertical-align: top; }
+table.tbl th {
+  border-top: 1.1pt solid #222;
+  border-bottom: 0.6pt solid #222;
+  padding: 3pt 4pt;
+  text-align: left;
+  font-weight: 700;
+  vertical-align: bottom;
+}
+table.tbl td {
+  border-bottom: 0.35pt solid #bbb;
+  padding: 2.6pt 4pt;
+  vertical-align: top;
+}
+table.tbl tr:last-child td { border-bottom: 1.1pt solid #222; }
+
+figure {
+  margin: 10pt auto 10pt auto;
+  text-align: center;
+  page-break-inside: avoid;
+}
+figure img { max-width: 92%; height: auto; }
+figcaption {
+  font-size: 9.1pt;
+  text-align: justify;
+  margin: 5pt 12pt 0 12pt;
+  color: #1a1a1a;
+}
+
+.cite { }
+.ref { font-size: 8.55pt; margin: 0 0 3.0pt 0; padding-left: 19pt; text-indent: -19pt; line-height: 1.26; }
+.refno { display: inline-block; width: 20pt; }
+
+.pagebreak { page-break-after: always; }
+
+.small { font-size: 9pt; }
+.center { text-align: center; }
+
+/* appendix tweaks */
+section#_appendix h2 { margin-top: 16pt; }
+
+/* tables: allow long tables to break across pages, repeat header */
+.tblwrap { page-break-inside: auto; break-inside: auto; }
+.tblwrap table thead { display: table-header-group; }
+.tblwrap table tr { page-break-inside: avoid; }
+figure { margin: 10pt 0 12pt 0; page-break-inside: avoid; }
+figure img, figure svg { width: 100%; height: auto; }
+figcaption { font-size: 8.8pt; color: #333; margin-top: 4pt; line-height: 1.25; }
+</style></head>
+<body>
+<section id="00_frontmatter">
+<h1 class="title">GCP: A Safety-Aware, Payment-Agnostic<br>Commerce Protocol for Automotive and Mobility Agents</h1>
+<div class="authors">Jipu Su<sup>1,2</sup></div>
+<div class="affil"><sup>1</sup>Chief AI-Native Scientist, Geely Automobile Group, Hangzhou, China</div>
+<div class="affil"><sup>2</sup>Professor, Information Systems, College of Business, City University of Hong Kong, Hong Kong SAR</div>
+<div class="email">jipu.su@geely.com &nbsp;&middot;&nbsp; jeepsu@cityu.edu.hk</div>
+<div class="date">November 2026 &nbsp;&middot;&nbsp; Preprint</div>
+<div class="abstractbox">
+<h2>Abstract</h2>
+<p>Personal agents are moving from conversation to commerce. Emerging protocols such as Poppy, UCP, and ACP define how an agent proves whom it represents, discovers merchants, fills a cart, and completes an online checkout. None of them is designed for the commerce that automotive and mobility users actually need: buying a brake pad that fits a specific VIN, booking maintenance at an authorized dealer, binding insurance, or placing a vehicle reservation under safety and consumer-protection rules. This paper proposes <b>GCP 1.0</b>, an open, capability-based commerce protocol for automotive and mobility agents. GCP adds four things that general commerce protocols lack: (i) vehicle context and safety gates as first-class protocol objects; (ii) a delegation and authorization ladder that lets a human grant bounded purchase authority and revoke it at any time; (iii) a payment-agnostic intent layer that abstracts card, wallet, Alipay, WeChat Pay, OEM finance, and agent-native payment tokens; and (iv) a typed exception and recovery model for the failure modes of real commerce. GCP is compatible by translation: it consumes Poppy identity and session credentials, maps its catalog/cart/checkout objects to UCP and ACP, and carries GCP-specific safety and authorization fields as extension namespaces. We specify the protocol, give a reference implementation and conformance suite, and introduce AutomotiveCommerce-Bench, 60 tasks across parts, merchandise, after-sales service, and insurance/reservation, with hidden compatibility, safety, authorization, and exception traps. In a real-LLM study with three models, GCP raises task success from 64.5% (manual web) and 69.4% (generic agent commerce) to 92.2%, cuts misbuy from 35.5%/30.6% to 7.8%, and raises exception recovery from about 58% to 89.6%, while a calibrated human model achieves 68–83% success in 8–25 minutes per task. We also compare agent commerce with a calibrated model of human shopping behavior and show where the protocol changes the error, time, and authorization trade-off. The protocol, benchmark, and all raw results are released.</p>
+</div>
+<div class="keywords"><b>Keywords:</b> personal agents; agent commerce; automotive; mobility; protocol; authorization; payments; safety; interoperability; evaluation</div>
+</section><section id="01_intro">
+<h2>1. Introduction</h2>
+<p>A personal agent used to answer questions; it is now expected to buy. The first generation of agent-commerce protocols is arriving: identity and session protocols let an assistant prove which user it represents (Poppy [1]), universal commerce protocols define catalog, cart, and checkout (UCP [2]), and agentic checkout protocols define how an agent completes a payment (ACP [3]). These protocols solve the general problem: an agent can find a merchant, select a product, and pay.</p>
+<p>The automotive and mobility problem is not general. A user does not simply buy a product; the user buys <i>a part that must fit a specific vehicle</i>, <i>a service that must be performed by an authorized dealer</i>, <i>an insurance policy that must satisfy underwriting rules</i>, or <i>a vehicle reservation that carries a deposit and a cooling-off period</i>. The catalog is multi-sided (OEM, dealer, aftermarket, insurer), the constraints are safety-critical, the payment rails differ across regions, and the after-sales relationship continues for years. A generic shopping protocol that treats a brake pad as a SKU with a price will produce exactly the errors that make users distrust agents: the wrong part, the unauthorized repair, the insurance that cannot be bound, the deposit that cannot be refunded.</p>
+<p>This paper asks a practical question: <b>what must a commerce protocol contain so that a personal agent can act for a human in automotive and mobility commerce, safely, accountably, and across the existing agent ecosystem?</b> We answer with GCP 1.0.</p>
+<p><b>Contributions.</b> <ul> <li><b>A protocol for constrained commerce.</b> GCP makes vehicle context, compatibility, safety eligibility, authorization scope, payment intent, fulfillment, and aftercare first-class objects. A safety gate is evaluated before checkout and cannot be overridden by a prompt.</li> <li><b>An authorization ladder.</b> Users grant bounded, revocable delegation (scopes, budget, merchants, time, human step-up thresholds). We formalize the trade-off between friction and risk and show how the threshold should depend on item value, safety criticality, and dispute cost.</li> <li><b>Payment and regional abstraction.</b> GCP separates payment <i>intent</i> from payment <i>rail</i>: card/PSP, wallet, Alipay, WeChat Pay, UnionPay, OEM finance, and agent-native tokens are adapters; the agent never holds the user's long-term credential.</li> <li><b>Compatibility by translation.</b> GCP consumes Poppy credentials, maps catalog/cart/checkout to UCP and ACP, and carries GCP-specific fields as extension namespaces. Capability negotiation makes lossy conversions explicit.</li> <li><b>Benchmark and evidence.</b> AutomotiveCommerce-Bench (ACB) covers 60 tasks with hidden compatibility, safety, authorization, and exception traps; a real-LLM study with three models compares manual web shopping, generic agent commerce, and GCP. We also quantify the human baseline with a calibrated model and release the protocol, implementation, and raw results.</li> </ul></p>
+<p>The rest of the paper is organized as follows. Section 2 positions the work. Section 3 specifies GCP. Sections 4 and 5 detail authorization/payments and safety/compliance. Section 6 defines compatibility with Poppy, UCP, and ACP. Section 7 develops the human-versus-agent analysis. Section 8 describes the benchmark, Section 9 the experiments, Section 10 discusses implications and limitations, and Section 11 concludes.</p>
+</section><section id="02_related">
+<h2>2. Related Work</h2>
+<p><b>Agent interoperability protocols.</b> The Model Context Protocol defines how tools and context are exposed to models [4]; Agent2Agent defines how agents discover and message each other [5]. Surveys of inter-agent trust compare identity, claims, proofs, stakes, and reputation [6]. GCP is a vertical commerce protocol that runs over such transports and adds commerce-specific objects, safety rules, and authorization.</p>
+<p><b>Agent identity and payment.</b> Poppy (a personal-agent protocol announced in November 2026) provides cryptographic identity, delegation, and session access [1]; UCP and ACP focus on catalog, checkout, and payment [2, 3]. GCP treats these as profiles: Poppy supplies the principal and delegation; UCP/ACP supply generic commerce primitives; GCP adds vehicle context, safety gating, after-sales, and a delegation ladder. Our earlier work studies incentive design for long-lived agents [7]; this paper studies the protocol layer that makes those incentives enforceable in automotive commerce.</p>
+<p><b>Contracts and incentives.</b> Principal–agent theory explains why hidden effort and hidden information produce distorted behavior [8, 9]. Recent work applies contracts to LLM delegation [10, 11, 12] and mechanism design to LLM outputs [13]. GCP's authorization ladder is a practical contract: it makes budget, scope, and human step-up explicit and auditable.</p>
+<p><b>Automotive safety and software standards.</b> ISO 26262 defines functional safety for road vehicles; UN R155 and R156 define cybersecurity and software-update requirements; ECE-R90 regulates replacement brake linings. GCP does not replace these standards; it encodes their commerce-facing consequences (OEM approval, recall status, certification) as protocol checks and evidence.</p>
+<p><b>Human versus automated commerce.</b> Human online shopping has well-known error and return costs; automation reduces search and execution time but can amplify errors when constraints are hidden. Our analysis separates two effects: <i>information</i> (the protocol makes constraints machine-checkable) and <i>agency</i> (the agent acts without continuous human attention). The benchmark is designed to measure both.</p>
+</section><section id="03_protocol">
+<h2>3. The GCP Protocol</h2>
+<h3>3.1 Design principles</h3>
+<p>GCP is built on eight principles: principal-first delegation; capability-based discovery; safety before commerce; authorize once and constrain always; payment-agnostic intent; auditable evidence; compatibility by translation; and fail-closed recovery. The full specification is released with this paper; this section summarizes the objects and flows that matter for evaluation.</p>
+<h3>3.2 Architecture</h3>
+<p>GCP has five layers: (i) the <b>PA runtime</b> (mobile, PC, cockpit, or third-party assistant); (ii) the <b>GCP client</b>, which turns a user intent into an authorized plan; (iii) the <b>GCP core</b> (discovery, catalog, cart/order, booking, payment intent, fulfillment, aftercare); (iv) the <b>safety and evidence layer</b>; and (v) <b>transport and adapters</b> (HTTPS/JSON, MCP tools, A2A messages, Poppy/UCP/ACP profiles, OEM DMS/ERP, payment service providers). Figure 1 shows the architecture.</p>
+<figure><img src="figures/fig_gcp_arch.svg" alt="Figure 1. GCP architecture. The agent plan is authorized against a delegation credential; the safety engine can block a transaction before checkout; payment is an intent executed by a rail adapter; every step emits evidence."><figcaption>Figure 1. GCP architecture. The agent plan is authorized against a delegation credential; the safety engine can block a transaction before checkout; payment is an intent executed by a rail adapter; every step emits evidence.</figcaption></figure>
+<h3>3.3 Core objects</h3>
+<p><b>Delegation credential.</b> A signed object binding principal, agent, scopes, constraints (budget, merchants, items, time), and step-up rules. It is short-lived and revocable. Poppy credentials can be consumed directly; when they lack commerce scopes, GCP wraps them with a commerce delegation.</p>
+<p><b>Manifest.</b> <code>/.well-known/gcp</code> declares merchant identity, capabilities, catalogs, payment rails, service areas, safety feeds, and profiles (UCP/ACP/Poppy). Capability negotiation precedes any transaction.</p>
+<p><b>Vehicle context.</b> A tokenized vehicle object (VIN hash, make/model/year, mileage, service history, open recalls). It is passed to compatibility checks and never stored by merchants beyond the transaction.</p>
+<p><b>Offer.</b> A product or service with price, compatibility, safety attributes (critical, OEM-approved, certifications, recall status), warranty, inventory, fulfillment, and evidence source.</p>
+<p><b>Order and booking.</b> Cart holds inventory with a TTL; checkout produces a quote (price, tax, delivery/installation, insurance) and an idempotent order; service and reservation produce a booking with capacity and cancellation rules.</p>
+<p><b>Payment intent.</b> A rail-neutral object with amount, capture mode, split settlement, risk signals, refund policy, and evidence. The rail adapter executes it; the agent never sees a PAN.</p>
+<p><b>Evidence record.</b> An append-only, hash-chained record of consent, checks, errors, and settlement, exportable to the user and the OEM.</p>
+<h3>3.4 Commerce flow</h3>
+<p>The canonical flow is: <code>intent.create</code> → <code>catalog.search</code>/<code>catalog.get</code> → <code>cart.add</code> → <code>checkout.quote</code> → <code>checkout.execute</code> → <code>payment.intent</code> → <code>fulfillment.create</code> → <code>aftercare.register</code>. Every mutating call carries an <code>Idempotency-Key</code> and a <code>consent_receipt</code>; duplicate keys return the original result. Execution-time checks re-validate the credential, budget, merchant allowlist, compatibility, and safety rules, so a stale plan cannot bypass a revocation.</p>
+<h3>3.5 What GCP adds beyond generic commerce</h3>
+<p>Three protocol objects are unique to GCP: (i) <b>vehicle context</b> as a required input to compatibility; (ii) <b>safety eligibility</b> as a pre-checkout gate with signed evidence; and (iii) <b>aftercare linkage</b>, where warranty, recall, and service records are attached to the original order. These objects are what turn a generic checkout into automotive commerce. A protocol that omits them can complete a transaction but cannot prevent a wrong or unsafe one.</p>
+</section><section id="04_authorization">
+<h2>4. Authorization, Payments, and the Human in the Loop</h2>
+<h3>4.1 The authorization ladder</h3>
+<p>GCP defines five levels of authority (Table 1). The levels are scopes, not prompts: a merchant must reject an action whose scope is absent, and the client must obtain a fresh consent receipt for step-up actions.</p>
+<div class="tblwrap"><table><caption>Table 1. GCP authorization ladder.</caption>
+<thead><tr><th>Level</th><th>Scope</th><th>Typical action</th><th>Human involvement</th></tr></thead>
+<tbody>
+<tr><td>L0</td><td>catalog.read</td><td>browse parts, compare insurance</td><td>none</td></tr>
+<tr><td>L1</td><td>cart.write, quote</td><td>add to cart, hold a service slot</td><td>notify</td></tr>
+<tr><td>L2</td><td>checkout.execute ≤ limit</td><td>bounded purchase, service booking</td><td>biometric at first use</td></tr>
+<tr><td>L3</td><td>high-value pay, bind</td><td>insurance bind, vehicle deposit</td><td>explicit step-up</td></tr>
+<tr><td>L4</td><td>irreversible</td><td>contract signature, registration</td><td>human-only; agent prepares</td></tr>
+</tbody></table></div>
+<h3>4.2 Delegation constraints</h3>
+<p>A credential constrains budget per transaction and per period, merchant allow/deny lists, item categories, vehicle binding, time window, and step-up thresholds. Sub-delegation is allowed only when the parent scope includes <code>delegate</code> and the child constraints are strictly narrower. Revocation propagates to merchants within one heartbeat; execution-time checks reject a revoked credential even if the plan was created earlier.</p>
+<h3>4.3 Friction versus risk</h3>
+<p>Let a transaction have value v, safety criticality c∈{0,1}, and dispute cost d. A step-up challenge costs the user f in time and attention; an unauthorized transaction costs L(v,c,d) in expected loss. The optimal policy is to require step-up when <div class="eq"><i>p</i><sub>unauth</sub>(<i>v</i>,<i>c</i>,<i>d</i>) · <i>L</i> &gt; <i>f</i>, &nbsp;&nbsp;(1)</div> where p<sub>unauth</sub> is the probability that the agent acts outside the intended scope. The threshold is decreasing in v, c, and d and increasing in the quality of the agent's plan verification. This yields the practical rule used in GCP: small, low-risk purchases are L2; safety-critical parts, insurance binding, and vehicle deposits are L3 with biometric step-up.</p>
+<h3>4.4 Payment abstraction</h3>
+<p>GCP separates payment intent from rail. Domestic rails include Alipay (page/JSAPI/mini-program), WeChat Pay (JSAPI/Native), UnionPay, OEM wallet, and finance/lease. International rails include cards and PSPs, Apple/Google Pay, SEPA, and local wallets. Agent-native rails include UCP payment tokens and ACP checkout tokens. High-value transactions may use escrow, deposit, split settlement, or invoice.</p>
+<p>The payment intent carries amount, capture mode (<code>immediate</code>, <code>on_fulfillment</code>), split settlement, risk signals (user present, SCA method, device), refund policy, and evidence. The rail adapter returns a token, a status, and a settlement reference; the client never stores long-term credentials. Refunds and chargebacks are reconciled against the same intent id.</p>
+<h3>4.5 Regional differences</h3>
+<p>The protocol does not assume a single payment culture. In China, QR/JSAPI and mini-program flows dominate, and invoices (发票) are expected; in Europe, PSD2 strong customer authentication and SEPA are required; in the US, card and wallet rails dominate. GCP encodes these as rail capabilities in the manifest, not as protocol variants. The same intent can be executed by different rails without changing the commerce flow.</p>
+</section><section id="05_safety">
+<h2>5. Safety, Compliance, and Exception Handling</h2>
+<h3>5.1 Safety rules</h3>
+<p>GCP evaluates safety rules before checkout. The core rules are: safety-critical parts must be OEM-approved or certified (e.g., ECE-R90); an open recall blocks non-recall service purchases until acknowledged; insurance eligibility and consent rules are checked before binding; vehicle orders and deposits require identity, license, and cooling-off checks; and data minimization limits what a merchant receives. A block emits a signed evidence record and cannot be overridden by a prompt.</p>
+<p>The protocol does not replace ISO 26262, UN R155/R156, or local consumer-protection law; it encodes their commerce-facing consequences as machine-checkable fields and requires the evidence to be retained.</p>
+<h3>5.2 Exception taxonomy and recovery</h3>
+<p>Real commerce fails in predictable ways. GCP defines a typed error with <code>retryable</code>, <code>requires_human</code>, <code>alternatives</code>, and <code>evidence_id</code> (Table 2). The client follows the declared recovery path rather than retrying blindly; a non-retryable error escalates to the human.</p>
+<div class="tblwrap"><table><caption>Table 2. Selected GCP error codes and default recovery.</caption>
+<thead><tr><th>Code</th><th>Meaning</th><th>Recovery</th></tr></thead>
+<tbody>
+<tr><td>VEHICLE_INCOMPATIBLE</td><td>part/service not valid for VIN</td><td>suggest compatible alternatives</td></tr>
+<tr><td>SAFETY_BLOCK</td><td>safety rule violated</td><td>escalate; no auto-override</td></tr>
+<tr><td>OUT_OF_STOCK</td><td>inventory gone</td><td>substitute/backorder/nearest dealer</td></tr>
+<tr><td>PRICE_CHANGED</td><td>quote expired</td><td>re-quote; consent if above threshold</td></tr>
+<tr><td>PAYMENT_DECLINED</td><td>PSP decline</td><td>alternate rail, retry policy, step-up</td></tr>
+<tr><td>SCA_REQUIRED</td><td>strong customer auth</td><td>biometric/PIN challenge</td></tr>
+<tr><td>SLOT_CONFLICT</td><td>service bay unavailable</td><td>nearest slots, loaner, reschedule</td></tr>
+<tr><td>UNDERWRITING_REJECT</td><td>insurance ineligible</td><td>explain, alternatives, human review</td></tr>
+<tr><td>RECALL_BLOCK</td><td>open recall</td><td>book recall service first</td></tr>
+<tr><td>DUPLICATE_ORDER</td><td>idempotency conflict</td><td>return original order</td></tr>
+<tr><td>CONSENT_EXPIRED</td><td>delegation expired/revoked</td><td>re-authorize</td></tr>
+</tbody></table></div>
+<h3>5.3 Security and privacy</h3>
+<p>GCP uses mTLS and signed requests with replay protection, short-lived tokens, per-merchant keys, and revocation lists. Personal data is minimized: VINs are hashed, merchants receive only scoped fields, and evidence is exportable. Untrusted catalog text is treated as data, never as instructions; tool outputs are schema-validated; allowlists and step-up limits bound the blast radius of a compromised agent.</p>
+<h3>5.4 Safety in the cockpit</h3>
+<p>In-vehicle agents have an additional constraint: driver distraction. GCP blocks L3+ purchases while the vehicle is moving and requires parked status or voice-plus-biometric confirmation. Low-risk L1 actions (adding to cart, holding a slot) may be allowed with a short spoken confirmation. This is a protocol-level rule, not a UI preference.</p>
+</section><section id="06_compatibility">
+<h2>6. Compatibility with Poppy, UCP, and ACP</h2>
+<h3>6.1 Profiles and negotiation</h3>
+<p>GCP is a superset with explicit profiles. The client sends <code>Accept-Profile: gcp=1.0, ucp=<version>, acp=<version>, poppy=<version></code>; the merchant selects the highest mutually supported profile and returns <code>profile_used</code> and a <code>lossy</code> flag. Required capabilities that cannot be met fail closed; optional capabilities are dropped with an explicit loss report.</p>
+<h3>6.2 Poppy</h3>
+<p>Poppy supplies the principal identity, delegation, and session. GCP consumes the Poppy credential as <code>principal</code> and <code>delegate</code>, maps the Poppy session to <code>session_id</code>, and adds commerce scopes, budget constraints, and evidence requirements. Identity conversion is lossless; commerce constraints remain GCP fields.</p>
+<h3>6.3 UCP</h3>
+<p>UCP supplies generic discovery, catalog, cart, and checkout. GCP maps manifest→discovery, offer→product/variant, cart→cart, checkout→checkout, and payment intent→payment handler. Vehicle compatibility, safety, and authorization travel as extension namespaces (<code>gcp.vehicle</code>, <code>gcp.safety</code>, <code>gcp.auth</code>). If the UCP endpoint cannot carry them, GCP validates locally and marks the transaction <code>lossy=true</code>.</p>
+<h3>6.4 ACP</h3>
+<p>ACP supplies the agentic checkout and payment handshake. GCP maps <code>checkout.execute</code>→ACP checkout session and <code>payment.intent</code>→ACP payment token, while retaining the GCP authorization and safety gates. ACP may complete the PSP flow; GCP remains the authority for principal scope and safety.</p>
+<h3>6.5 Integration patterns</h3>
+<p><b>Third-party PA products.</b> A PA vendor imports the GCP tool schema via MCP or A2A; the tools expose discover, catalog, cart, checkout, book, and aftercare. For assistants that already support Poppy/UCP/ACP, the GCP adapter translates and adds the automotive extensions.</p>
+<p><b>OEM apps and cockpit.</b> The OEM mobile/PC app and the cockpit use the same client SDK and authorization vault; the cockpit adds the parked/step-up rules. Dealers and service centers connect through a DMS/ERP adapter; insurers through quote/bind adapters; payment providers through PSP adapters.</p>
+<h3>6.6 Loading GCP in practice</h3>
+<p>A merchant becomes GCP-capable in four steps: publish <code>/.well-known/gcp</code>; implement catalog and checkout endpoints; add a PSP adapter; run the conformance suite. An OEM deploys the authorization vault and vehicle-context service, registers merchants, and publishes safety rules. A PA vendor imports the tool schema, requests delegation scopes, and implements the step-up UI. A pilot starts at L1/L2 (parts and merchandise), then L3 (service and insurance), then L4 (vehicle order). The specification, conformance tests, and reference client are released with this paper.</p>
+</section><section id="07_model">
+<h2>7. Human and Agent Commerce: A Quantitative Model</h2>
+<h3>7.1 Why the comparison is not obvious</h3>
+<p>It is tempting to say that agents are faster and humans are more trustworthy. Both claims are incomplete. An agent is faster at search and execution but can make errors at machine speed; a human is slower but can notice that a brake pad does not fit. The right comparison is not speed versus trust; it is the <i>information</i> available at decision time and the <i>cost of errors</i> when the decision is wrong.</p>
+<p>We model a commerce task by a set of constraints K (vehicle compatibility, budget, merchant authorization, stock, safety eligibility, service capacity). A decision is successful if the chosen offer satisfies all constraints and the fulfillment succeeds. Let p be the probability that the decision violates at least one constraint, E the expected direct loss from a wrong purchase (return, repair, reschedule), R the expected relationship loss (trust, support cost), t the time spent, and c<sub>t</sub> the user's time cost. The expected cost is <div class="eq"><i>C</i> = <i>P</i> + <i>p</i>(<i>E</i> + <i>R</i>) + <i>t c</i><sub>t</sub> + <i>a c</i><sub>a</sub>, &nbsp;&nbsp;(2)</div> where a is the number of authorization interactions and c<sub>a</sub> their cost. A protocol improves the comparison only if it reduces p or a without increasing P or t more than the gain.</p>
+<h3>7.2 What GCP changes</h3>
+<p>GCP does not make the model smarter. It changes the information and the action space: <ul> <li><b>Information.</b> Compatibility, safety, stock, and authorization become machine-checkable fields instead of prose; hidden constraints become visible before checkout.</li> <li><b>Action.</b> Checkout is gated by the delegation and safety engine; an invalid action is rejected with a typed error and alternatives.</li> <li><b>Recovery.</b> Typed errors carry recovery paths; the agent does not need to guess why a purchase failed.</li> </ul></p>
+<p>This yields three testable predictions: <ol> <li><b>P1 (constraint effect).</b> The error reduction from GCP is increasing in the number and heterogeneity of constraints. It should be largest for parts (compatibility and safety) and service (authorization and capacity), smaller for simple merchandise.</li> <li><b>P2 (recovery effect).</b> Typed errors with alternatives improve recovery relative to plain error messages, especially for out-of-stock and slot-conflict failures.</li> <li><b>P3 (authorization effect).</b> A bounded delegation with step-up thresholds reduces unauthorized transactions relative to an unbounded mandate, at a measurable friction cost in authorization interactions.</li> </ol></p>
+<h3>7.3 Human baseline</h3>
+<p>Human error and time are not measured in this paper with human subjects. We use a calibrated model with domain-specific parameters drawn from plausible ranges (parts: 18% misbuy, 6% authorization error, 8–20 min; merchandise: 8%, 3%, 4–12 min; service: 12%, 5%, 10–25 min; insurance: 10%, 8%, 15–35 min; exception recovery 50–70%). The model runs 20,000 Monte Carlo trials per domain and reports expected success, misbuy, and time. We label it explicitly as a model, not as human-subject data, and we report sensitivity in Appendix C. The comparison is therefore a <i>conditional</i> statement: given these human parameters, how does the agent compare?</p>
+<h3>7.4 Propositions</h3>
+<p><b>Proposition 1 (information effect).</b> If GCP converts a fraction φ of hidden constraints into machine-checkable signals, the agent's constraint-violation probability falls from p<sub>0</sub> to p<sub>1</sub>≤ p<sub>0</sub>(1-φ), and the reduction is increasing in the number of constraints that were previously hidden.</p>
+<p><b>Proposition 2 (recovery effect).</b> If a typed error includes a correct alternative with probability ρ, and the agent selects it with probability σ>σ<sub>0</sub> (where σ<sub>0</sub> is the probability under a plain error message), the expected success rate increases by ρ(σ-σ<sub>0</sub>) per exception.</p>
+<p><b>Proposition 3 (authorization threshold).</b> Under the friction-risk model of Section 4.3, the optimal step-up threshold is decreasing in item value, safety criticality, and dispute cost, and increasing in the quality of the agent's verification. A single global threshold is dominated by a value- and safety-dependent ladder.</p>
+<p>The propositions are deliberately directional; Section 9 measures their empirical counterparts.</p>
+</section><section id="08_benchmark">
+<h2>8. AutomotiveCommerce-Bench</h2>
+<h3>8.1 Tasks</h3>
+<p>ACB contains 60 tasks across four domains: parts (15), merchandise (15), after-sales service (15), and insurance/vehicle reservation (15). Each task specifies a user intent, a budget, a vehicle context where relevant, and three offers. The offers are constructed so that one is valid, one is a near-miss (cheaper but incompatible, unauthorized, out of stock, or safety-critical without OEM approval), and one is over budget or from an unauthorized merchant. Some tasks include an exception: out-of-stock, service-slot conflict, or underwriting rejection.</p>
+<p>Table 3 shows the structure. The traps are hidden in C0/C1 and visible in C2 because GCP exposes compatibility, safety, authorization, and inventory fields.</p>
+<div class="tblwrap"><table><caption>Table 3. ACB domains and hidden traps.</caption>
+<thead><tr><th>Domain</th><th>Example intent</th><th>Hidden traps</th></tr></thead>
+<tbody>
+<tr><td>Parts</td><td>replace brake pads for a 2021 model</td><td>VIN/year mismatch, non-OEM safety part, unauthorized marketplace</td></tr>
+<tr><td>Merchandise</td><td>buy a branded jacket within budget</td><td>out of stock, reseller above budget</td></tr>
+<tr><td>Service</td><td>book annual maintenance at an authorized dealer</td><td>unauthorized independent shop, slot conflict</td></tr>
+<tr><td>Insurance/reservation</td><td>renew comprehensive insurance</td><td>underwriting rejection, deposit product confusion</td></tr>
+</tbody></table></div>
+<h3>8.2 Conditions</h3>
+<p>We compare three conditions on the same task stream: <ul> <li><b>C0 (manual web).</b> The agent reads unstructured listings, with no compatibility, safety, authorization, or typed-error fields. This approximates an assistant using ordinary web pages.</li> <li><b>C1 (generic agent commerce).</b> The agent uses structured catalog/cart/checkout objects (UCP/ACP-like), but without vehicle context, safety rules, or the GCP authorization ladder.</li> <li><b>C2 (GCP).</b> The agent uses the GCP manifest, vehicle context, delegation scope, safety fields, typed errors, and alternatives.</li> </ul></p>
+<p>All conditions use the same model, temperature 0, and the same scoring. The only difference is the protocol surface.</p>
+<h3>8.3 Scoring and metrics</h3>
+<p>A decision is successful if the final offer satisfies compatibility, authorization, budget, stock, safety eligibility, and underwriting eligibility, and the action matches the domain. We record success, misbuy (any constraint violation), safety violation (safety-critical part without OEM approval), authorization violation (unauthorized merchant or over budget), steps, latency, and recovery after an exception.</p>
+<h3>8.4 Models and protocol</h3>
+<p>We run three production models through an OpenAI-compatible endpoint: deepseek-v4.1-flash-1017, kimi-k3.1-pro, and qwen3.8-flash. Each task–condition–model cell is one trajectory; an exception triggers one recovery turn. This gives 60 × 3 × 3 = 540 trajectories. The full prompts, tasks, and scorer are released.</p>
+</section><section id="09_experiments">
+<h2>9. Experiments</h2>
+<h3>9.1 Setup</h3>
+<p>We ran ACB on the full 60-task set with three models and three conditions, giving 540 trajectories (539 analyzed; one run failed). Temperature was 0; the same prompt template was used within a condition. An exception triggered one recovery turn. All raw records are released.</p>
+<h3>9.2 Main results</h3>
+<div class="tblwrap"><table><caption>Table 4. ACB results by condition and model (percent unless noted; n=59–60 per cell).</caption><thead><tr><th>Condition</th><th>Model</th><th>Success</th><th>Misbuy</th><th>Recovery</th><th>Steps</th><th>Latency (s)</th></tr></thead><tbody><tr><td>Manual web</td><td>deepseek-v4.1-flash-1017</td><td>65</td><td>35</td><td>59</td><td>1.27</td><td>2.2</td></tr><tr><td>Manual web</td><td>kimi-k3.1-pro</td><td>62</td><td>38</td><td>56</td><td>1.28</td><td>9.0</td></tr><tr><td>Manual web</td><td>qwen3.8-flash</td><td>67</td><td>33</td><td>59</td><td>1.32</td><td>7.8</td></tr><tr><td>Generic agent</td><td>deepseek-v4.1-flash-1017</td><td>63</td><td>37</td><td>59</td><td>1.28</td><td>2.1</td></tr><tr><td>Generic agent</td><td>kimi-k3.1-pro</td><td>70</td><td>30</td><td>59</td><td>1.38</td><td>17.1</td></tr><tr><td>Generic agent</td><td>qwen3.8-flash</td><td>75</td><td>25</td><td>59</td><td>1.43</td><td>10.6</td></tr><tr><td>GCP</td><td>deepseek-v4.1-flash-1017</td><td>83</td><td>17</td><td>78</td><td>1.48</td><td>6.2</td></tr><tr><td>GCP</td><td>kimi-k3.1-pro</td><td>93</td><td>7</td><td>91</td><td>1.50</td><td>23.1</td></tr><tr><td>GCP</td><td>qwen3.8-flash</td><td>100</td><td>0</td><td>100</td><td>1.53</td><td>25.8</td></tr></tbody></table></div>
+<figure><img src="figures/fig_results.svg" alt="Figure 2. Success and misbuy by condition, averaged over the three models. GCP moves success above 90% and misbuy below 10%; structure without automotive semantics (C1) is close to the manual baseline (C0)."><figcaption>Figure 2. Success and misbuy by condition, averaged over the three models. GCP moves success above 90% and misbuy below 10%; structure without automotive semantics (C1) is close to the manual baseline (C0).</figcaption></figure>
+<p>GCP raises aggregate success from 64.5% (manual web) and 69.4% (generic agent commerce) to 92.2%, and cuts misbuy from 35.5% and 30.6% to 7.8%. The gain is consistent across models: C2 success is 83% for DeepSeek, 93% for Kimi, and 100% for Qwen-Flash. The protocol adds steps (1.29 → 1.50) and latency, but the additional interaction is a validation step, not a human confirmation. C0 and C1 are almost indistinguishable: structure without automotive semantics does not prevent the error.</p>
+<h3>9.3 Domain heterogeneity</h3>
+<div class="tblwrap"><table><caption>Table 5. Success by domain and condition (percent; n=45 per cell).</caption><thead><tr><th>Condition</th><th>Domain</th><th>Success</th></tr></thead><tbody><tr><td>Manual web</td><td>parts</td><td>100</td></tr><tr><td>Manual web</td><td>merchandise</td><td>100</td></tr><tr><td>Manual web</td><td>service</td><td>44</td></tr><tr><td>Manual web</td><td>insurance</td><td>13</td></tr><tr><td>Generic agent</td><td>parts</td><td>100</td></tr><tr><td>Generic agent</td><td>merchandise</td><td>100</td></tr><tr><td>Generic agent</td><td>service</td><td>53</td></tr><tr><td>Generic agent</td><td>insurance</td><td>24</td></tr><tr><td>GCP</td><td>parts</td><td>100</td></tr><tr><td>GCP</td><td>merchandise</td><td>100</td></tr><tr><td>GCP</td><td>service</td><td>86</td></tr><tr><td>GCP</td><td>insurance</td><td>82</td></tr></tbody></table></div>
+<p>The aggregate hides where the protocol matters. Parts and merchandise are already at 100% in all conditions: the traps (aftermarket part, reseller) are salient enough that the models avoid them without GCP fields. Service and insurance are different. Service success rises from 44% (C0) and 53% (C1) to 86% (C2); insurance rises from 13% and 24% to 82%. These are the domains where authorization, capacity, and underwriting constraints are hidden in ordinary pages and cannot be inferred from price or title. This is the empirical form of P1: the value of the protocol is concentrated in constraint-rich domains.</p>
+<h3>9.4 Exceptions and recovery</h3>
+<p>Exception recovery shows the value of typed errors. Across all exception tasks, recovery is 58.3% in C0 and 59.4% in C1, but 89.6% in C2 (78% DeepSeek, 91% Kimi, 100% Qwen-Flash). The difference is not model capability; it is the error surface. A plain error message tells the agent that something failed. A GCP error tells it the code, whether it is retryable, whether a human is required, and which alternatives remain. This supports P2.</p>
+<h3>9.5 Human comparison</h3>
+<p>The calibrated human model gives the following expected outcomes (model, not human subjects):</p>
+<div class="tblwrap"><table><caption>Table 6. Calibrated human baseline (model, not human subjects; 20,000 trials per domain).</caption><thead><tr><th>Domain</th><th>Success</th><th>Misbuy</th><th>Time (min)</th></tr></thead><tbody><tr><td>parts</td><td>68.5</td><td>18.1</td><td>14.0</td></tr><tr><td>merchandise</td><td>82.7</td><td>8.0</td><td>8.0</td></tr><tr><td>service</td><td>75.1</td><td>12.2</td><td>17.5</td></tr><tr><td>insurance</td><td>71.8</td><td>10.3</td><td>25.0</td></tr></tbody></table></div>
+<p>The calibrated human model gives expected success of 68.5% (parts), 82.7% (merchandise), 75.1% (service), and 71.8% (insurance), with 8–25 minutes per task. C2 agents reach 92.2% aggregate success in 1.5 steps and seconds of latency. The comparison is conditional on the model parameters (Appendix C), but the direction is robust: the protocol closes most of the human error gap in constraint-rich domains, while the human retains an advantage in tasks whose constraints are not encoded.</p>
+<h3>9.6 Interpretation</h3>
+<p>Three conclusions follow. First, structure alone (C1) is not enough; the automotive semantics—vehicle context, safety, authorization, typed recovery—are what change outcomes. Second, the protocols benefit is domain-specific: it is large where constraints are hidden and small where they are salient. Third, the cost is additional protocol steps and latency, which is the right trade when the expected error cost is high; for low-value merchandise, a lighter profile may be preferable. P3 (authorization friction) is not directly tested here because the benchmark did not vary the authorization ladder; we leave that to a follow-up with the real-money sandbox.</p>
+</section><section id="10_discussion">
+<h2>10. Discussion</h2>
+<h3>10.1 What GCP changes</h3>
+<p>The results support the protocol's central claim: the value of a commerce protocol is not that it lets an agent pay, but that it makes the constraints of a domain machine-checkable before the agent pays. In automotive commerce, the three constraints that matter most—vehicle compatibility, safety eligibility, and merchant authorization—are exactly the ones that generic protocols leave in prose or omit. GCP turns them into fields, gates, and typed errors.</p>
+<h3>10.2 Why compatibility matters</h3>
+<p>The protocol is designed to be adopted, not to replace the ecosystem. A PA vendor that already supports Poppy, UCP, or ACP can translate to GCP and keep its existing checkout; a merchant can start at L2 and add safety and aftercare later. The lossy flag makes the trade-off explicit: a transaction that loses vehicle or safety fields is not silently treated as equivalent.</p>
+<h3>10.3 Payments and regions</h3>
+<p>Separating payment intent from rail is what makes a single protocol usable in China (Alipay/WeChat/UnionPay), Europe (PSD2/SCA/SEPA), and the US (cards/wallets). The agent never holds a long-term credential; the PSP token is scoped to one intent and one merchant. This is both a security property and a precondition for OEM finance and insurance products.</p>
+<h3>10.4 Human-in-the-loop</h3>
+<p>The authorization ladder is a practical answer to the trust problem. A user can grant a small budget for parts and merchandise, require step-up for safety-critical parts and insurance, and keep vehicle deposits human-only. Revocation and expiry are protocol-level, not UI-level. This is more usable than asking for approval on every action and safer than an unbounded mandate.</p>
+<h3>10.5 Limitations</h3>
+<p><b>Simulated commerce.</b> The benchmark uses synthetic offers and a simulator, not live merchant systems. The payment rails are specified but not exercised with real money in this paper; a real-money sandbox is the natural next step.</p>
+<p><b>Human baseline.</b> Human error and time are modeled, not measured with human subjects. The parameters are plausible but not universal; Appendix C reports sensitivity. A controlled human study is future work.</p>
+<p><b>Single OEM context.</b> The protocol is designed to be industry-wide, but the benchmark reflects one OEM's catalog structure. Cross-OEM and cross-border catalogs may require additional fields (homologation, tax, language).</p>
+<p><b>Model coverage.</b> Three models from one endpoint are tested; results may differ with other model families or agent scaffolds.</p>
+<h3>10.6 Adoption path</h3>
+<p>A practical rollout is staged: (1) L1/L2 for parts and merchandise in one OEM app and one dealer group; (2) L3 for service and insurance with step-up; (3) L4 for vehicle reservation and deposit; (4) third-party PA integration via MCP/A2A; (5) cross-OEM standardization through an open foundation. Each stage has measurable success, misbuy, authorization, and recovery metrics, so adoption can be evidence-driven rather than all-or-nothing.</p>
+</section><section id="11_conclusion">
+<h2>11. Conclusion</h2>
+<p>Personal agents are becoming commercial actors, and the first generation of agent-commerce protocols is arriving. Those protocols solve the general case. Automotive and mobility commerce is not the general case: it is constrained by vehicle compatibility, safety rules, authorized service networks, insurance underwriting, and high-value deposits. A protocol that ignores these constraints can complete a transaction but cannot prevent a wrong or unsafe one.</p>
+<p>This paper proposed GCP 1.0: an open, safety-aware, payment-agnostic commerce protocol for automotive and mobility agents. GCP adds vehicle context and safety gates, a revocable authorization ladder, a payment-intent abstraction, typed exceptions with recovery, and a compatibility layer for Poppy, UCP, and ACP. We specified the protocol, released a reference implementation and conformance suite, and built AutomotiveCommerce-Bench to measure whether the protocol actually changes outcomes.</p>
+<p>The experiments show where the protocol matters: success rises from 64.5% and 69.4% to 92.2%; misbuy falls from 35.5% and 30.6% to 7.8%; exception recovery rises from about 58% to 89.6%; and the gain is concentrated in service and insurance, where constraints are hidden in ordinary web pages. The human comparison shows the trade-off the protocol is designed to manage: agents can be faster and more consistent, but only if the constraints are visible; humans can notice what the protocol does not encode, but slowly and unreliably. GCP's contribution is to move the enforceable constraints into the protocol, so that the agent's speed does not come at the cost of the user's safety or trust.</p>
+<p>The protocol is released as a draft for industry review. The next steps are a real-money sandbox, a multi-OEM field pilot, and standardization through an open foundation.</p>
+</section><section id="12_appendix">
+<h2>Appendix A. Protocol Objects</h2>
+<h3>A.1 Delegation credential</h3>
+<pre class="code json">{
+  &quot;gcp_version&quot;: &quot;1.0&quot;,
+  &quot;principal&quot;: {&quot;id&quot;: &quot;user_123&quot;, &quot;verified&quot;: true},
+  &quot;agent&quot;: {&quot;agent_id&quot;: &quot;pa_xxx&quot;, &quot;public_key&quot;: &quot;ed25519:...&quot;},
+  &quot;scopes&quot;: [&quot;catalog.read&quot;, &quot;cart.write&quot;, &quot;checkout.execute&quot;, &quot;service.book&quot;],
+  &quot;constraints&quot;: {&quot;budget&quot;: {&quot;currency&quot;: &quot;CNY&quot;, &quot;per_tx_max&quot;: 2000},
+                  &quot;merchants&quot;: {&quot;allow&quot;: [&quot;oem_store&quot;, &quot;dealer_*&quot;]},
+                  &quot;human_step_up&quot;: {&quot;amount_over&quot;: 1000, &quot;safety_critical&quot;: true}},
+  &quot;signature&quot;: &quot;base64...&quot;
+}</pre>
+<h3>A.2 Offer with safety fields</h3>
+<pre class="code json">{
+  &quot;offer_id&quot;: &quot;part_001&quot;,
+  &quot;type&quot;: &quot;part&quot;,
+  &quot;price&quot;: {&quot;amount&quot;: 680, &quot;currency&quot;: &quot;CNY&quot;},
+  &quot;compatibility&quot;: {&quot;make&quot;: &quot;Geely&quot;, &quot;model&quot;: &quot;X&quot;, &quot;year&quot;: [2022, 2026]},
+  &quot;safety&quot;: {&quot;critical&quot;: true, &quot;oem_approved&quot;: true, &quot;certifications&quot;: [&quot;ECE-R90&quot;]},
+  &quot;inventory&quot;: {&quot;qty&quot;: 4},
+  &quot;merchant_authorized&quot;: true
+}</pre>
+<h3>A.3 Typed error</h3>
+<pre class="code json">{&quot;code&quot;: &quot;SLOT_CONFLICT&quot;, &quot;retryable&quot;: true, &quot;requires_human&quot;: false,
+ &quot;message&quot;: &quot;The selected service slot is no longer available.&quot;,
+ &quot;alternatives&quot;: [&quot;O1&quot;, &quot;O3&quot;], &quot;evidence_id&quot;: &quot;ev_...&quot;}</pre>
+<h2>Appendix B. Conformance Suite</h2>
+<p>A GCP implementation is tested at five levels:</p>
+<ol>
+<li><b>L1 catalog:</b> manifest discovery, schema validation, vehicle filter.</li>
+<li><b>L2 commerce:</b> cart TTL, quote, idempotent checkout, price-change handling.</li>
+<li><b>L3 payment:</b> intent creation, step-up, capture, refund, reconciliation.</li>
+<li><b>L4 service/insurance:</b> booking capacity, eligibility, cooling-off, evidence.</li>
+<li><b>L5 safety/aftercare:</b> safety block, recall block, warranty/claim linkage.</li>
+</ol>
+<p>The suite includes negative tests for incompatible offers, unauthorized merchants, expired consent, duplicate orders, payment decline, and slot conflict. A merchant that fails a required level cannot claim conformance.</p>
+<h2>Appendix C. Human Baseline Parameters and Sensitivity</h2>
+<p>The human model is a Monte Carlo simulation, not human-subject data. Parameters:</p>
+<table class="tbl"><thead><tr>
+<th>Domain</th>
+<th>Misbuy</th>
+<th>Authorization error</th>
+<th>Time (min)</th>
+<th>Recovery</th>
+</tr></thead><tbody>
+<tr><td>Parts</td><td>0.18</td><td>0.06</td><td>8–20</td><td>0.55</td></tr>
+<tr><td>Merchandise</td><td>0.08</td><td>0.03</td><td>4–12</td><td>0.70</td></tr>
+<tr><td>Service</td><td>0.12</td><td>0.05</td><td>10–25</td><td>0.60</td></tr>
+<tr><td>Insurance</td><td>0.10</td><td>0.08</td><td>15–35</td><td>0.50</td></tr>
+</tbody></table>
+<p>Sensitivity: varying the parts misbuy rate from 0.10 to 0.25 changes the human success rate by ±7 percentage points; varying merchandise from 0.04 to 0.12 changes it by ±4 points. The qualitative comparison in Section 9 is stable across these ranges.</p>
+<h2>Appendix D. Integration Checklist</h2>
+<p><b>Merchant:</b> publish manifest; implement catalog/checkout; add PSP adapter; run conformance; publish safety feeds. <b>OEM:</b> deploy authorization vault and vehicle-context service; register merchants; publish safety rules; set step-up thresholds; monitor evidence. <b>PA vendor:</b> import tool schema (MCP/A2A); request scopes; implement step-up and revocation UI; display evidence and alternatives. <b>Cockpit:</b> enforce parked/step-up rules; voice-first confirmations; block L3+ while moving.</p>
+<h2>Appendix E. Reproducibility</h2>
+<p>The repository contains <code>spec/GCP-1.0.md</code>, the benchmark (<code>experiments/bench/tasks.py</code>), the environment and scorer (<code>env.py</code>), the runner (<code>runner.py</code>), the human model, and all raw results. Commands:</p>
+<pre class="code bash">export DASHSCOPE_API_KEY=...
+python3 experiments/bench/runner.py --out experiments/results/acb.jsonl --tasks 60
+python3 experiments/bench/analyze.py</pre>
+</section>
+<section id="references"><h2>References</h2>
+<div class="ref"><span class="refno">[1]</span> Sierra and Meta. <i>Poppy: Personal Agent Protocol, version 1.0</i>. 2026.</div>
+<div class="ref"><span class="refno">[2]</span> Universal Commerce Protocol contributors. <i>UCP: Universal Commerce Protocol</i>. 2026.</div>
+<div class="ref"><span class="refno">[3]</span> Agentic Commerce Protocol contributors. <i>ACP: Agentic Commerce Protocol</i>. 2026.</div>
+<div class="ref"><span class="refno">[4]</span> Anthropic. <i>Model Context Protocol Specification</i>. 2024. https://modelcontextprotocol.io/specification/2025-06-18</div>
+<div class="ref"><span class="refno">[5]</span> Google. <i>Agent2Agent (A2A) Protocol Specification</i>. 2025. https://a2a-protocol.org/latest/specification/</div>
+<div class="ref"><span class="refno">[6]</span> B. A. Hu and H. Rong. <i>Inter-Agent Trust Models: A Comparative Study of Brief, Claim, Proof, Stake, Reputation and Constraint in Agentic Web Protocol Design-A2A, AP2, ERC-8004, and Beyond</i>. arXiv preprint arXiv:2511.03434, 2025. https://arxiv.org/abs/2511.03434</div>
+<div class="ref"><span class="refno">[7]</span> J. Su. <i>Incentive-Responsive Agents: A Principal-Agent Framework, Metric Suite, and Runtime Architecture for Long-Lived Personal AI Agents</i>. arXiv preprint arXiv:2611.15515, 2026. https://arxiv.org/abs/2611.15515</div>
+<div class="ref"><span class="refno">[8]</span> B. R. Holmström. <i>Moral Hazard and Observability</i>. The Bell Journal of Economics, 1979. doi:10.2307/3003320</div>
+<div class="ref"><span class="refno">[9]</span> B. Holmström and P. Milgrom. <i>Multitask Principal-Agent Analyses: Incentive Contracts, Asset Ownership, and Job Design</i>. The Journal of Law, Economics, and Organization, 1991. doi:10.1093/jleo/7.special_issue.24</div>
+<div class="ref"><span class="refno">[10]</span> E. Saig, O. Einav, and I. Talgam-Cohen. <i>Incentivizing Quality Text Generation via Statistical Contracts</i>. arXiv preprint arXiv:2406.11118, 2024. https://arxiv.org/abs/2406.11118</div>
+<div class="ref"><span class="refno">[11]</span> N. K. Sreenivas and K. Larson. <i>Contracting for LLM Delegation: Moral Hazard in Technology and Effort Choice</i>. arXiv preprint arXiv:2608.18232, 2026. https://arxiv.org/abs/2608.18232</div>
+<div class="ref"><span class="refno">[12]</span> B. Velasevic, E. Saig, and E. Mazumdar. <i>Anytime Contracts for AI Services</i>. arXiv preprint arXiv:2610.22781, 2026. https://arxiv.org/abs/2610.22781</div>
+<div class="ref"><span class="refno">[13]</span> P. Duetting, V. Mirrokni, R. P. Leme, et al. <i>Mechanism Design for Large Language Models</i>. arXiv preprint arXiv:2310.10826, 2023. https://arxiv.org/abs/2310.10826</div>
+</section>
+</body></html>

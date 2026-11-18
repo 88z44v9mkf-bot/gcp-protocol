@@ -1,0 +1,14 @@
+<h1 class="title">GCP: A Safety-Aware, Payment-Agnostic<br>Commerce Protocol for Automotive and Mobility Agents</h1>
+
+<div class="authors">Jipu Su<sup>1,2</sup></div>
+<div class="affil"><sup>1</sup>Chief AI-Native Scientist, Geely Automobile Group, Hangzhou, China</div>
+<div class="affil"><sup>2</sup>Professor, Information Systems, College of Business, City University of Hong Kong, Hong Kong SAR</div>
+<div class="email">jipu.su@geely.com &nbsp;&middot;&nbsp; jeepsu@cityu.edu.hk</div>
+<div class="date">November 2026 &nbsp;&middot;&nbsp; Preprint</div>
+
+<div class="abstractbox">
+<h2>Abstract</h2>
+<p>Personal agents are moving from conversation to commerce. Emerging protocols such as Poppy, UCP, and ACP define how an agent proves whom it represents, discovers merchants, fills a cart, and completes an online checkout. None of them is designed for the commerce that automotive and mobility users actually need: buying a brake pad that fits a specific VIN, booking maintenance at an authorized dealer, binding insurance, or placing a vehicle reservation under safety and consumer-protection rules. This paper proposes <b>GCP 1.0</b>, an open, capability-based commerce protocol for automotive and mobility agents. GCP adds four things that general commerce protocols lack: (i) vehicle context and safety gates as first-class protocol objects; (ii) a delegation and authorization ladder that lets a human grant bounded purchase authority and revoke it at any time; (iii) a payment-agnostic intent layer that abstracts card, wallet, Alipay, WeChat Pay, OEM finance, and agent-native payment tokens; and (iv) a typed exception and recovery model for the failure modes of real commerce. GCP is compatible by translation: it consumes Poppy identity and session credentials, maps its catalog/cart/checkout objects to UCP and ACP, and carries GCP-specific safety and authorization fields as extension namespaces. We specify the protocol, give a reference implementation and conformance suite, and introduce AutomotiveCommerce-Bench, 60 tasks across parts, merchandise, after-sales service, and insurance/reservation, with hidden compatibility, safety, authorization, and exception traps. In a real-LLM study with three models, GCP raises task success from 64.5% (manual web) and 69.4% (generic agent commerce) to 92.2%, cuts misbuy from 35.5%/30.6% to 7.8%, and raises exception recovery from about 58% to 89.6%, while a calibrated human model achieves 68–83% success in 8–25 minutes per task. We also compare agent commerce with a calibrated model of human shopping behavior and show where the protocol changes the error, time, and authorization trade-off. The protocol, benchmark, and all raw results are released.</p>
+</div>
+
+<div class="keywords"><b>Keywords:</b> personal agents; agent commerce; automotive; mobility; protocol; authorization; payments; safety; interoperability; evaluation</div>

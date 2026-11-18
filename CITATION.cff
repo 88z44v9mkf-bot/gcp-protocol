@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use GCP or ACB, please cite this work."
+title: "GCP: A Safety-Aware, Payment-Agnostic Commerce Protocol for Automotive and Mobility Agents"
+authors:
+  - family-names: "Su"
+    given-names: "Jipu"
+    affiliation: "Geely Automobile Group; City University of Hong Kong"
+year: 2026
+version: 0.1.0
+license: "CC-BY-4.0"

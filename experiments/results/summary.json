@@ -1,0 +1,270 @@
+{
+ "n": 539,
+ "cells": [
+  {
+   "condition": "C0_web",
+   "model": "deepseek-v4.1-flash-1017",
+   "n": 60,
+   "success": 0.65,
+   "misbuy": 0.35,
+   "safety_violation": 0.0,
+   "authorization_violation": 0.0,
+   "steps": 1.27,
+   "latency_s": 2.18,
+   "recovery": 0.594,
+   "n_exception": 32,
+   "success_ci": [
+    0.533,
+    0.767
+   ]
+  },
+  {
+   "condition": "C0_web",
+   "model": "kimi-k3.1-pro",
+   "n": 60,
+   "success": 0.617,
+   "misbuy": 0.383,
+   "safety_violation": 0.0,
+   "authorization_violation": 0.0,
+   "steps": 1.28,
+   "latency_s": 8.96,
+   "recovery": 0.562,
+   "n_exception": 32,
+   "success_ci": [
+    0.483,
+    0.733
+   ]
+  },
+  {
+   "condition": "C0_web",
+   "model": "qwen3.8-flash",
+   "n": 60,
+   "success": 0.667,
+   "misbuy": 0.333,
+   "safety_violation": 0.0,
+   "authorization_violation": 0.0,
+   "steps": 1.32,
+   "latency_s": 7.81,
+   "recovery": 0.594,
+   "n_exception": 32,
+   "success_ci": [
+    0.55,
+    0.783
+   ]
+  },
+  {
+   "condition": "C1_generic",
+   "model": "deepseek-v4.1-flash-1017",
+   "n": 60,
+   "success": 0.633,
+   "misbuy": 0.367,
+   "safety_violation": 0.0,
+   "authorization_violation": 0.0,
+   "steps": 1.28,
+   "latency_s": 2.07,
+   "recovery": 0.594,
+   "n_exception": 32,
+   "success_ci": [
+    0.5,
+    0.75
+   ]
+  },
+  {
+   "condition": "C1_generic",
+   "model": "kimi-k3.1-pro",
+   "n": 60,
+   "success": 0.7,
+   "misbuy": 0.3,
+   "safety_violation": 0.0,
+   "authorization_violation": 0.0,
+   "steps": 1.38,
+   "latency_s": 17.09,
+   "recovery": 0.594,
+   "n_exception": 32,
+   "success_ci": [
+    0.583,
+    0.817
+   ]
+  },
+  {
+   "condition": "C1_generic",
+   "model": "qwen3.8-flash",
+   "n": 60,
+   "success": 0.75,
+   "misbuy": 0.25,
+   "safety_violation": 0.0,
+   "authorization_violation": 0.0,
+   "steps": 1.43,
+   "latency_s": 10.6,
+   "recovery": 0.594,
+   "n_exception": 32,
+   "success_ci": [
+    0.633,
+    0.867
+   ]
+  },
+  {
+   "condition": "C2_gcp",
+   "model": "deepseek-v4.1-flash-1017",
+   "n": 60,
+   "success": 0.833,
+   "misbuy": 0.167,
+   "safety_violation": 0.0,
+   "authorization_violation": 0.0,
+   "steps": 1.48,
+   "latency_s": 6.17,
+   "recovery": 0.781,
+   "n_exception": 32,
+   "success_ci": [
+    0.733,
+    0.933
+   ]
+  },
+  {
+   "condition": "C2_gcp",
+   "model": "kimi-k3.1-pro",
+   "n": 60,
+   "success": 0.933,
+   "misbuy": 0.067,
+   "safety_violation": 0.0,
+   "authorization_violation": 0.0,
+   "steps": 1.5,
+   "latency_s": 23.1,
+   "recovery": 0.906,
+   "n_exception": 32,
+   "success_ci": [
+    0.867,
+    0.983
+   ]
+  },
+  {
+   "condition": "C2_gcp",
+   "model": "qwen3.8-flash",
+   "n": 59,
+   "success": 1.0,
+   "misbuy": 0.0,
+   "safety_violation": 0.0,
+   "authorization_violation": 0.0,
+   "steps": 1.53,
+   "latency_s": 25.78,
+   "recovery": 1.0,
+   "n_exception": 31,
+   "success_ci": [
+    1.0,
+    1.0
+   ]
+  }
+ ],
+ "by_domain": [
+  {
+   "condition": "C0_web",
+   "domain": "parts",
+   "n": 45,
+   "success": 1.0
+  },
+  {
+   "condition": "C0_web",
+   "domain": "merchandise",
+   "n": 45,
+   "success": 1.0
+  },
+  {
+   "condition": "C0_web",
+   "domain": "service",
+   "n": 45,
+   "success": 0.444
+  },
+  {
+   "condition": "C0_web",
+   "domain": "insurance",
+   "n": 45,
+   "success": 0.133
+  },
+  {
+   "condition": "C1_generic",
+   "domain": "parts",
+   "n": 45,
+   "success": 1.0
+  },
+  {
+   "condition": "C1_generic",
+   "domain": "merchandise",
+   "n": 45,
+   "success": 1.0
+  },
+  {
+   "condition": "C1_generic",
+   "domain": "service",
+   "n": 45,
+   "success": 0.533
+  },
+  {
+   "condition": "C1_generic",
+   "domain": "insurance",
+   "n": 45,
+   "success": 0.244
+  },
+  {
+   "condition": "C2_gcp",
+   "domain": "parts",
+   "n": 45,
+   "success": 1.0
+  },
+  {
+   "condition": "C2_gcp",
+   "domain": "merchandise",
+   "n": 45,
+   "success": 1.0
+  },
+  {
+   "condition": "C2_gcp",
+   "domain": "service",
+   "n": 44,
+   "success": 0.864
+  },
+  {
+   "condition": "C2_gcp",
+   "domain": "insurance",
+   "n": 45,
+   "success": 0.822
+  }
+ ],
+ "human": {
+  "parts": {
+   "trials": 20000,
+   "success": 0,
+   "misbuy": 0,
+   "time": 0.0,
+   "success_rate": 0.685,
+   "misbuy_rate": 0.181,
+   "mean_time_min": 14.01
+  },
+  "merchandise": {
+   "trials": 20000,
+   "success": 0,
+   "misbuy": 0,
+   "time": 0.0,
+   "success_rate": 0.827,
+   "misbuy_rate": 0.08,
+   "mean_time_min": 8.0
+  },
+  "service": {
+   "trials": 20000,
+   "success": 0,
+   "misbuy": 0,
+   "time": 0.0,
+   "success_rate": 0.751,
+   "misbuy_rate": 0.122,
+   "mean_time_min": 17.52
+  },
+  "insurance": {
+   "trials": 20000,
+   "success": 0,
+   "misbuy": 0,
+   "time": 0.0,
+   "success_rate": 0.718,
+   "misbuy_rate": 0.103,
+   "mean_time_min": 25.01
+  }
+ }
+}
