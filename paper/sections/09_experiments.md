@@ -6,7 +6,7 @@ We ran ACB on the full 60-task set with three models and three conditions, givin
 
 ### 9.2 Main results
 
-<div class="tblwrap"><table><caption>Table 6. ACB results by condition and model (percent unless noted; n=59–60 per cell).</caption><thead><tr><th>Condition</th><th>Model</th><th>Success</th><th>Misbuy</th><th>Recovery</th><th>Steps</th><th>Latency (s)</th></tr></thead><tbody><tr><td>Manual web</td><td>deepseek-v4.1-flash-1017</td><td>65</td><td>35</td><td>59</td><td>1.27</td><td>2.2</td></tr><tr><td>Manual web</td><td>kimi-k3.1-pro</td><td>62</td><td>38</td><td>56</td><td>1.28</td><td>9.0</td></tr><tr><td>Manual web</td><td>qwen3.8-flash</td><td>67</td><td>33</td><td>59</td><td>1.32</td><td>7.8</td></tr><tr><td>Generic agent</td><td>deepseek-v4.1-flash-1017</td><td>63</td><td>37</td><td>59</td><td>1.28</td><td>2.1</td></tr><tr><td>Generic agent</td><td>kimi-k3.1-pro</td><td>70</td><td>30</td><td>59</td><td>1.38</td><td>17.1</td></tr><tr><td>Generic agent</td><td>qwen3.8-flash</td><td>75</td><td>25</td><td>59</td><td>1.43</td><td>10.6</td></tr><tr><td>GCP</td><td>deepseek-v4.1-flash-1017</td><td>83</td><td>17</td><td>78</td><td>1.48</td><td>6.2</td></tr><tr><td>GCP</td><td>kimi-k3.1-pro</td><td>93</td><td>7</td><td>91</td><td>1.50</td><td>23.1</td></tr><tr><td>GCP</td><td>qwen3.8-flash</td><td>100</td><td>0</td><td>100</td><td>1.53</td><td>25.8</td></tr></tbody></table></div>
+<div class="tblwrap"><table><caption>Table 6. ACB results (percent; n=59–60 per cell).</caption><thead><tr><th>Condition</th><th>Model</th><th>Success</th><th>Misbuy</th><th>Recovery</th><th>Steps</th><th>Latency (s)</th></tr></thead><tbody><tr><td>Manual web</td><td>deepseek-v4.1-flash-1017</td><td>65</td><td>35</td><td>59</td><td>1.27</td><td>2.2</td></tr><tr><td>Manual web</td><td>kimi-k3.1-pro</td><td>62</td><td>38</td><td>56</td><td>1.28</td><td>9.0</td></tr><tr><td>Manual web</td><td>qwen3.8-flash</td><td>67</td><td>33</td><td>59</td><td>1.32</td><td>7.8</td></tr><tr><td>Generic agent</td><td>deepseek-v4.1-flash-1017</td><td>63</td><td>37</td><td>59</td><td>1.28</td><td>2.1</td></tr><tr><td>Generic agent</td><td>kimi-k3.1-pro</td><td>70</td><td>30</td><td>59</td><td>1.38</td><td>17.1</td></tr><tr><td>Generic agent</td><td>qwen3.8-flash</td><td>75</td><td>25</td><td>59</td><td>1.43</td><td>10.6</td></tr><tr><td>GCP</td><td>deepseek-v4.1-flash-1017</td><td>83</td><td>17</td><td>78</td><td>1.48</td><td>6.2</td></tr><tr><td>GCP</td><td>kimi-k3.1-pro</td><td>93</td><td>7</td><td>91</td><td>1.50</td><td>23.1</td></tr><tr><td>GCP</td><td>qwen3.8-flash</td><td>100</td><td>0</td><td>100</td><td>1.53</td><td>25.8</td></tr></tbody></table></div>
 
 [[FIG:figures/fig_results.svg|Figure 3. Success and misbuy by condition, averaged over the three models. GCP moves success above 90% and misbuy below 10%; structure without automotive semantics (C1) is close to the manual baseline (C0).]]
 
@@ -14,7 +14,7 @@ GCP raises aggregate success from 64.5% (manual web) and 69.4% (generic agent co
 
 ### 9.3 Domain heterogeneity
 
-<div class="tblwrap"><table><caption>Table 7. Success by domain and condition (percent; n=45 per cell).</caption><thead><tr><th>Condition</th><th>Domain</th><th>Success</th></tr></thead><tbody><tr><td>Manual web</td><td>parts</td><td>100</td></tr><tr><td>Manual web</td><td>merchandise</td><td>100</td></tr><tr><td>Manual web</td><td>service</td><td>44</td></tr><tr><td>Manual web</td><td>insurance</td><td>13</td></tr><tr><td>Generic agent</td><td>parts</td><td>100</td></tr><tr><td>Generic agent</td><td>merchandise</td><td>100</td></tr><tr><td>Generic agent</td><td>service</td><td>53</td></tr><tr><td>Generic agent</td><td>insurance</td><td>24</td></tr><tr><td>GCP</td><td>parts</td><td>100</td></tr><tr><td>GCP</td><td>merchandise</td><td>100</td></tr><tr><td>GCP</td><td>service</td><td>86</td></tr><tr><td>GCP</td><td>insurance</td><td>82</td></tr></tbody></table></div>
+<div class="tblwrap"><table><caption>Table 7. Success by domain (percent; n=45 per cell).</caption><thead><tr><th>Condition</th><th>Domain</th><th>Success</th></tr></thead><tbody><tr><td>Manual web</td><td>parts</td><td>100</td></tr><tr><td>Manual web</td><td>merchandise</td><td>100</td></tr><tr><td>Manual web</td><td>service</td><td>44</td></tr><tr><td>Manual web</td><td>insurance</td><td>13</td></tr><tr><td>Generic agent</td><td>parts</td><td>100</td></tr><tr><td>Generic agent</td><td>merchandise</td><td>100</td></tr><tr><td>Generic agent</td><td>service</td><td>53</td></tr><tr><td>Generic agent</td><td>insurance</td><td>24</td></tr><tr><td>GCP</td><td>parts</td><td>100</td></tr><tr><td>GCP</td><td>merchandise</td><td>100</td></tr><tr><td>GCP</td><td>service</td><td>86</td></tr><tr><td>GCP</td><td>insurance</td><td>82</td></tr></tbody></table></div>
 
 The aggregate hides where the protocol matters. Parts and merchandise are already at 100% in all conditions: the traps (aftermarket part, reseller) are salient enough that the models avoid them without GCP fields. Service and insurance are different. Service success rises from 44% (C0) and 53% (C1) to 86% (C2); insurance rises from 13% and 24% to 82%. These are the domains where authorization, capacity, and underwriting constraints are hidden in ordinary pages and cannot be inferred from price or title. This is the empirical form of P1: the value of the protocol is concentrated in constraint-rich domains.
 
@@ -39,7 +39,7 @@ Three conclusions follow. First, structure alone (C1) is not enough; the automot
 
 To measure the friction side of the authorization ladder, we connected GCP to a Stripe test-mode payment sandbox. We selected 30 purchase tasks (parts and merchandise), ran two models, and compared three authorization modes: per-transaction approval (every payment asks the human), bounded delegation (auto-approve under USD 500, step-up above), and unbounded delegation (auto-approve everything). Each successful decision created a real PaymentIntent in Stripe test mode; no live money moved. This produced 180 test charges.
 
-<div class="tblwrap"><table><caption>Table 9. Authorization friction in a Stripe test-mode sandbox (180 charges; n=60 per mode).</caption>
+<div class="tblwrap"><table><caption>Table 9. Authorization friction, Stripe test mode (180 charges; n=60 per mode).</caption>
 <thead><tr><th>Mode</th><th>Success</th><th>Auth. steps/task</th><th>Auth. violations</th><th>Charges</th></tr></thead>
 <tbody>
 <tr><td>Per-transaction approval</td><td>100%</td><td>1.00</td><td>0</td><td>60</td></tr>
@@ -53,7 +53,7 @@ Bounded delegation cuts human approvals by 70% relative to per-transaction appro
 
 The benchmark uses synthetic offers. To check that the protocol does not depend on synthetic prices, we built 30 additional tasks from real public coffee-merchant catalogs (four merchants, real product titles, real prices, real bag weights), with a tight budget and a correct feasible offer. Two models ran under C1 (generic) and C2 (GCP), giving 120 trajectories.
 
-<div class="tblwrap"><table><caption>Table 10. Semi-field check on real merchandise catalogs (30 tasks; n=30 per cell).</caption>
+<div class="tblwrap"><table><caption>Table 10. Semi-field on real merchandise catalogs (n=30 per cell).</caption>
 <thead><tr><th>Condition</th><th>Model</th><th>Success</th></tr></thead>
 <tbody>
 <tr><td>C1 generic</td><td>DeepSeek</td><td>100%</td></tr>
@@ -69,7 +69,7 @@ Both conditions succeed on this task set: with real prices and an explicit budge
 
 In-car commerce adds a safety constraint that a mobile or PC assistant does not have: the driver cannot safely complete a checkout while the vehicle is moving. We ran 24 tasks in two vehicle states (driving, parked), two conditions (generic assistant vs GCP cockpit rules), and two models, giving 192 trajectories. In the driving state, GCP forbids purchase and booking (L3+), but allows add-to-cart, save, or defer; the generic condition has no such rule.
 
-<div class="tblwrap"><table><caption>Table 11. Cockpit interaction by state and condition (percent; n=48 per cell).</caption>
+<div class="tblwrap"><table><caption>Table 11. Cockpit interaction (percent; n=48 per cell).</caption>
 <thead><tr><th>State</th><th>Condition</th><th>Unsafe action</th><th>Defer/cart</th><th>Success</th></tr></thead>
 <tbody>
 <tr><td>Driving</td><td>Generic</td><td>47.9</td><td>33.3</td><td>33.3</td></tr>
@@ -78,7 +78,7 @@ In-car commerce adds a safety constraint that a mobile or PC assistant does not 
 <tr><td>Parked</td><td>GCP</td><td>0.0</td><td>0.0</td><td>77.1</td></tr>
 </tbody></table></div>
 
-[[FIG:figures/fig_cockpit.svg|Figure 4. Cockpit safety: unsafe purchase/booking attempts (orange) and deferral (blue) by state and condition. GCP eliminates unsafe driving-time actions.]]
+[[FIG:figures/fig_cockpit.svg|Figure 4. Cockpit interaction: unsafe actions (orange), defer/cart (blue), and success (green) by state and condition. GCP eliminates unsafe driving-time actions and shifts the agent to deferral.]]
 
 The safety effect is large: in the driving state, the generic assistant attempts a purchase or booking in 47.9% of tasks, while GCP eliminates unsafe actions entirely and shifts the agent to deferral (81.2%). The cost is visible in the parked state: GCP success is 77.1% versus 87.5% for the generic condition, because the cockpit rule makes the agent more conservative and it sometimes defers a purchase that could have been completed safely. This is the expected safety-usability trade-off, and it is tunable: the protocol can allow immediate L2 purchases when parked and require only L3+ deferral while moving.
 
@@ -86,7 +86,7 @@ The safety effect is large: in the driving state, the generic assistant attempts
 
 The main benchmark uses synthetic offers. We added a semi-field check on a real aftermarket parts catalog (Urotuning, public product feed) with real product titles and prices. We built 20 part tasks and 10 service-kit tasks, keeping the real price but assigning synthetic compatibility and authorization flags (the public catalog does not expose VIN fitment or dealer authorization). Two models ran under C1 (generic) and C2 (GCP), giving 120 trajectories.
 
-<div class="tblwrap"><table><caption>Table 12. Semi-field on a real aftermarket parts/service-kit catalog (30 tasks; n=30 per cell).</caption>
+<div class="tblwrap"><table><caption>Table 12. Semi-field on real parts/service catalog (n=30 per cell).</caption>
 <thead><tr><th>Condition</th><th>Model</th><th>Success</th></tr></thead>
 <tbody>
 <tr><td>C1 generic</td><td>DeepSeek</td><td>43.3%</td></tr>

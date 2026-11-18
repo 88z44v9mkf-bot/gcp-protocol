@@ -8,7 +8,6 @@ GCP is built on eight principles: principal-first delegation; capability-based d
 
 GCP has five layers: (i) the <b>PA runtime</b> (mobile, PC, cockpit, or third-party assistant); (ii) the <b>GCP client</b>, which turns a user intent into an authorized plan; (iii) the <b>GCP core</b> (discovery, catalog, cart/order, booking, payment intent, fulfillment, aftercare); (iv) the <b>safety and evidence layer</b>; and (v) <b>transport and adapters</b> (HTTPS/JSON, MCP tools, A2A messages, Poppy/UCP/ACP profiles, OEM DMS/ERP, payment service providers). Figure 1 shows the architecture.
 
-[[FIG:figures/fig_gcp_arch.svg|Figure 1. GCP architecture. The agent plan is authorized against a delegation credential; the safety engine can block a transaction before checkout; payment is an intent executed by a rail adapter; every step emits evidence.]]
 
 ### 3.3 Core objects
 
@@ -35,6 +34,8 @@ The canonical flow is: `intent.create` → `catalog.search`/`catalog.get` → `c
 Three protocol objects are unique to GCP: (i) <b>vehicle context</b> as a required input to compatibility; (ii) <b>safety eligibility</b> as a pre-checkout gate with signed evidence; and (iii) <b>aftercare linkage</b>, where warranty, recall, and service records are attached to the original order. These objects are what turn a generic checkout into automotive commerce. A protocol that omits them can complete a transaction but cannot prevent a wrong or unsafe one.
 
 
+[[FIG:figures/fig_gcp_arch.svg|Figure 1. GCP architecture. The agent plan is authorized against a delegation credential; the safety engine can block a transaction before checkout; payment is an intent executed by a rail adapter; every step emits evidence.]]
+
 ### 3.6 Designed for the next twelve to twenty-four months
 
 GCP is specified for the interaction pattern that is emerging, not only for today's app. Three horizons matter.
@@ -53,8 +54,8 @@ The horizon is deliberately short: model and product capability is moving fast e
 <thead><tr><th>Horizon</th><th>Who initiates</th><th>Human role</th><th>Protocol requirement</th></tr></thead>
 <tbody>
 <tr><td>H1 assisted</td><td>human</td><td>approves payment</td><td>discovery, compatibility, bounded step-up</td></tr>
-<tr><td>H2 delegated</td><td>human sets policy; agent acts</td><td>reviews exceptions</td><td>revocable mandate, proactive triggers, audit</td></tr>
-<tr><td>H3 agent-native</td><td>agents negotiate</td><td>sets policy, audits outcomes</td><td>agent-to-agent contracts, evidence, liability, settlement</td></tr>
+<tr><td style="white-space:nowrap">H2 delegated</td><td>human sets policy</td><td>reviews exceptions</td><td>revocable mandate, proactive triggers, audit</td></tr>
+<tr><td style="white-space:nowrap">H3 agent-native</td><td>agents negotiate</td><td>sets policy, audits</td><td>agent contracts, evidence, liability</td></tr>
 </tbody></table></div>
 
 The design implication is that GCP cannot be a thin checkout wrapper. It must carry the <i>policy</i> (who may act, for what, under which limits) and the <i>evidence</i> (what happened, why, and who is accountable) across all three horizons. That is why authorization, safety, and evidence are core objects rather than optional extensions.
