@@ -2,7 +2,7 @@
 
 ### 10.1 What GCP changes
 
-The results support the protocol's central claim: the value of a commerce protocol is not that it lets an agent pay, but that it makes the constraints of a domain machine-checkable before the agent pays. In automotive commerce, the three constraints that matter most—vehicle compatibility, safety eligibility, and merchant authorization—are exactly the ones that generic protocols leave in prose or omit. GCP turns them into fields, gates, and typed errors.
+The results support the protocol's central claim: the value of a commerce protocol is not that it lets an agent pay, but that it makes the constraints of a domain machine-checkable before the agent pays. In automotive commerce, the three constraints that matter most—vehicle compatibility, safety eligibility, and merchant authorization—are exactly the ones that generic protocols leave in prose or omit. GCP turns them into fields, gates, and typed errors. The cockpit experiment makes the safety case concrete: without the protocol, the agent attempts an unsafe purchase while driving in nearly half of the tasks; with GCP, unsafe attempts fall to zero and the agent defers. The real-catalog experiment makes the information case concrete: with real prices but no compatibility or authorization fields, the generic agent succeeds in only 26.7% of tasks; with GCP, it succeeds in 100%.
 
 ### 10.2 Why compatibility matters
 
@@ -22,7 +22,7 @@ The authorization ladder is a practical answer to the trust problem. A user can 
 
 <b>Human baseline.</b> Human error and time are modeled, not measured with human subjects. The parameters are plausible but not universal; Appendix C reports sensitivity. A controlled human study is future work.
 
-<b>OEM and category coverage.</b> The benchmark uses three anonymized OEM profiles, and the semi-field check covers a real merchandise catalog rather than a multi-OEM automotive catalog. Cross-OEM and cross-border catalogs may require additional fields (homologation, tax, language); a multi-OEM field study is future work.
+<b>OEM and category coverage.</b> The benchmark uses three anonymized OEM profiles. The semi-field check uses a real aftermarket parts catalog, but its compatibility and authorization flags are synthetic; it is not an OEM parts catalog, and it does not cover dealer service menus or insurance underwriting data. Cross-OEM and cross-border catalogs may require additional fields (homologation, tax, language); a multi-OEM field study is future work.
 
 <b>Model coverage.</b> Three models from one endpoint are tested; results may differ with other model families or agent scaffolds.
 

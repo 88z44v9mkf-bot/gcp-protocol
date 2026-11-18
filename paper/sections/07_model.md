@@ -41,11 +41,11 @@ The propositions are deliberately directional; Section 9 measures their empirica
 
 ### 7.5 Interaction cost across horizons
 
-The comparison in Sections 7.1–7.4 is about a single task. The twelve-year question is about the <i>interaction cost per unit of commerce</i>: how many human touches, how much waiting, and how much oversight are needed as the agent takes on more work.
+The comparison in Sections 7.1–7.4 is about a single task. The near-term question (12–24 months) is about the <i>interaction cost per unit of commerce</i>: how many human touches, how much waiting, and how much oversight are needed as the agent takes on more work.
 
 Let a task have $s$ interaction steps, of which $s_h$ require the human, and let $w$ be the waiting time per step. The interaction cost is
 <div class="eq"><i>I</i> = <i>s</i><sub><i>h</i></sub> <i>c</i><sub><i>h</i></sub> + (<i>s</i> − <i>s</i><sub><i>h</i></sub>) <i>w</i> + <i>a c</i><sub><i>a</i></sub>, &nbsp;&nbsp;(3)</div>
-where $c_h$ is the cost of a human step and $c_a$ the cost of an approval. Table 4 gives a scenario analysis for the four commerce families, combining the measured agent behavior in Section 9 with the calibrated human baseline and the horizon assumptions in Section 3.6. The numbers are scenario estimates, not forecasts; their purpose is to show which protocol properties dominate as authority moves from the human to the agent.
+where $c_h$ is the cost of a human step and $c_a$ the cost of an approval. Table 4 gives a scenario analysis for the four commerce families, combining the measured agent behavior in Section 9 with the calibrated human baseline and the horizon assumptions in Section 3.6 (0–6, 6–18, and 18–36 months). The numbers are scenario estimates, not forecasts; their purpose is to show which protocol properties dominate as authority moves from the human to the agent.
 
 <div class="tblwrap"><table><caption>Table 4. Interaction cost per task by horizon (scenario estimates; human steps and minutes).</caption>
 <thead><tr><th>Family</th><th>H1 human</th><th>H1 agent</th><th>H2 agent</th><th>H3 agent</th></tr></thead>
@@ -57,3 +57,6 @@ where $c_h$ is the cost of a human step and $c_a$ the cost of an approval. Table
 </tbody></table></div>
 
 Three implications follow. First, the dominant cost shifts from <i>search and form-filling</i> (human) to <i>authorization and exception review</i> (agent). A protocol that does not reduce authorization friction will not deliver the H2 benefit. Second, the number of human touches falls faster than the number of agent steps; the binding constraint becomes trust and liability, not latency. Third, the protocol must remain useful when the human is absent for long periods: expiry, revocation, anomaly detection, and evidence export become more important than the checkout call itself.
+
+
+The frequency of interaction amplifies the authorization problem. If a user buys a part twice a year, one approval per purchase is tolerable. If an agent reorders consumables monthly, books service twice a year, and renews insurance annually, the oversight load is the product of tasks and exception rate, not the cost of a single task. GCP's evidence ledger and typed exceptions are designed to make oversight <i>batchable</i>: the user reviews exceptions and anomalies, not every transaction, and the protocol records enough context to make that review fast.

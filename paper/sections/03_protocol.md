@@ -35,17 +35,17 @@ The canonical flow is: `intent.create` → `catalog.search`/`catalog.get` → `c
 Three protocol objects are unique to GCP: (i) <b>vehicle context</b> as a required input to compatibility; (ii) <b>safety eligibility</b> as a pre-checkout gate with signed evidence; and (iii) <b>aftercare linkage</b>, where warranty, recall, and service records are attached to the original order. These objects are what turn a generic checkout into automotive commerce. A protocol that omits them can complete a transaction but cannot prevent a wrong or unsafe one.
 
 
-### 3.6 Designed for the next twelve years
+### 3.6 Designed for the next twelve to twenty-four months
 
 GCP is specified for the interaction pattern that is emerging, not only for today's app. Three horizons matter.
 
-<b>H1 (2026–2029): assisted commerce.</b> The human initiates a task in a mobile or PC assistant; the agent searches, compares, and prepares a cart; the human approves payment. The interaction is still turn-taking, but the agent absorbs search and form-filling. GCP's job in H1 is to make constraints visible and approvals bounded.
+<b>H1 (0–6 months): assisted commerce.</b> The human initiates a task in a mobile or PC assistant; the agent searches, compares, and prepares a cart; the human approves payment. The interaction is still turn-taking, but the agent absorbs search and form-filling. GCP's job in H1 is to make constraints visible and approvals bounded.
 
-<b>H2 (2029–2033): delegated commerce.</b> The human grants a mandate ("keep the car maintained; buy approved accessories under a monthly budget"); the agent acts proactively, books service, and reorders consumables. The human reviews exceptions, not every step. GCP's job in H2 is to make mandates revocable, auditable, and composable across merchants and OEMs.
+<b>H2 (6–18 months): delegated commerce.</b> The human grants a mandate ("keep the car maintained; buy approved accessories under a monthly budget"); the agent acts proactively, books service, and reorders consumables. The human reviews exceptions, not every step. GCP's job in H2 is to make mandates revocable, auditable, and composable across merchants and OEMs.
 
-<b>H3 (2033–2038): agent-native commerce.</b> Multiple agents negotiate on behalf of a household, a fleet, or a small business; agents transact with agents; the human sets policy and audits outcomes. GCP's job in H3 is to make agent-to-agent negotiation, evidence, liability, and settlement first-class, while preserving a human principal at the root of every delegation chain.
+<b>H3 (18–36 months): agent-native commerce.</b> Multiple agents negotiate on behalf of a household, a fleet, or a small business; agents transact with agents; the human sets policy and audits outcomes. GCP's job in H3 is to make agent-to-agent negotiation, evidence, liability, and settlement first-class, while preserving a human principal at the root of every delegation chain.
 
-The protocol is deliberately layered so that H1 deployments are not throwaway: the same delegation credential, evidence record, and safety object used for a single purchase in H1 become the policy and audit layer for an autonomous fleet in H3. Table 1 summarizes the interaction shifts and the protocol requirement each shift creates.
+The horizon is deliberately short: model and product capability is moving fast enough that all three patterns may appear within one to two years, with overlap. The protocol is layered so that H1 deployments are not throwaway: the same delegation credential, evidence record, and safety object used for a single purchase in H1 become the policy and audit layer for an autonomous fleet in H3. Table 1 summarizes the interaction shifts and the protocol requirement each shift creates.
 
 <div class="tblwrap"><table><caption>Table 1. Interaction evolution and GCP requirements.</caption>
 <thead><tr><th>Horizon</th><th>Who initiates</th><th>Human role</th><th>Protocol requirement</th></tr></thead>

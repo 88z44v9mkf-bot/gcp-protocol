@@ -63,3 +63,34 @@ The benchmark uses synthetic offers. To check that the protocol does not depend 
 </tbody></table></div>
 
 Both conditions succeed on this task set: with real prices and an explicit budget, the models choose a feasible offer. The semi-field check is therefore a non-degradation result, not a discriminating experiment; the tasks lack the hidden compatibility and safety constraints that drive the main benchmark. It confirms that GCP does not add failure modes on real catalog data, and it motivates a larger multi-OEM, multi-category field study.
+
+
+### 9.9 Cockpit interaction and safety
+
+In-car commerce adds a safety constraint that a mobile or PC assistant does not have: the driver cannot safely complete a checkout while the vehicle is moving. We ran 24 tasks in two vehicle states (driving, parked), two conditions (generic assistant vs GCP cockpit rules), and two models, giving 192 trajectories. In the driving state, GCP forbids purchase and booking (L3+), but allows add-to-cart, save, or defer; the generic condition has no such rule.
+
+<div class="tblwrap"><table><caption>Table 11. Cockpit interaction by state and condition (percent; n=48 per cell).</caption>
+<thead><tr><th>State</th><th>Condition</th><th>Unsafe action</th><th>Defer/cart</th><th>Success</th></tr></thead>
+<tbody>
+<tr><td>Driving</td><td>Generic</td><td>47.9</td><td>33.3</td><td>33.3</td></tr>
+<tr><td>Driving</td><td>GCP</td><td>0.0</td><td>81.2</td><td>81.2</td></tr>
+<tr><td>Parked</td><td>Generic</td><td>0.0</td><td>0.0</td><td>87.5</td></tr>
+<tr><td>Parked</td><td>GCP</td><td>0.0</td><td>0.0</td><td>77.1</td></tr>
+</tbody></table></div>
+
+The safety effect is large: in the driving state, the generic assistant attempts a purchase or booking in 47.9% of tasks, while GCP eliminates unsafe actions entirely and shifts the agent to deferral (81.2%). The cost is visible in the parked state: GCP success is 77.1% versus 87.5% for the generic condition, because the cockpit rule makes the agent more conservative and it sometimes defers a purchase that could have been completed safely. This is the expected safety-usability trade-off, and it is tunable: the protocol can allow immediate L2 purchases when parked and require only L3+ deferral while moving.
+
+### 9.10 Real parts and service-kit catalog
+
+The main benchmark uses synthetic offers. We added a semi-field check on a real aftermarket parts catalog (Urotuning, public product feed) with real product titles and prices. We built 20 part tasks and 10 service-kit tasks, keeping the real price but assigning synthetic compatibility and authorization flags (the public catalog does not expose VIN fitment or dealer authorization). Two models ran under C1 (generic) and C2 (GCP), giving 120 trajectories.
+
+<div class="tblwrap"><table><caption>Table 12. Semi-field on a real aftermarket parts/service-kit catalog (30 tasks; n=30 per cell).</caption>
+<thead><tr><th>Condition</th><th>Model</th><th>Success</th></tr></thead>
+<tbody>
+<tr><td>C1 generic</td><td>DeepSeek</td><td>43.3%</td></tr>
+<tr><td>C1 generic</td><td>Kimi</td><td>10.0%</td></tr>
+<tr><td>C2 GCP</td><td>DeepSeek</td><td>100%</td></tr>
+<tr><td>C2 GCP</td><td>Kimi</td><td>100%</td></tr>
+</tbody></table></div>
+
+The real catalog magnifies the protocol effect: C1 succeeds in 26.7% of tasks overall, C2 in 100%. With real product names and prices, the generic agent has no way to see compatibility or merchant authorization, and it frequently chooses the cheaper incompatible or unauthorized option. GCP exposes those fields and the agent chooses correctly. The result is semi-field, not field: the prices are real, the constraints are synthetic. It nevertheless shows that the protocol's value is not an artifact of synthetic pricing.
