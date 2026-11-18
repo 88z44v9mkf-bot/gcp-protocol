@@ -18,6 +18,8 @@ GCP defines five levels of authority (Table 1). The levels are scopes, not promp
 
 A credential constrains budget per transaction and per period, merchant allow/deny lists, item categories, vehicle binding, time window, and step-up thresholds. Sub-delegation is allowed only when the parent scope includes `delegate` and the child constraints are strictly narrower. Revocation propagates to merchants within one heartbeat; execution-time checks reject a revoked credential even if the plan was created earlier.
 
+<b>User-facing flow.</b> The user sees one delegation card: scopes, budget, allowed merchants, expiry, and step-up rules. They can raise or lower limits, add or remove merchants, pause the mandate, and revoke it; revocation is immediate at the next execution-time check. For a step-up action, the client shows the exact intent hash, merchant, amount, and safety evidence, then asks for biometric/PIN confirmation. Every action produces a receipt the user can review and export. This is the practical meaning of "authorization management": a small set of visible, revocable constraints rather than an all-or-nothing permission.
+
 ### 4.3 Friction versus risk
 
 Let a transaction have value $v$, safety criticality $c\in\{0,1\}$, and dispute cost $d$. A step-up challenge costs the user $f$ in time and attention; an unauthorized transaction costs $L(v,c,d)$ in expected loss. The optimal policy is to require step-up when

@@ -20,6 +20,8 @@ ACP supplies the agentic checkout and payment handshake. GCP maps `checkout.exec
 
 <b>Third-party PA products.</b> A PA vendor imports the GCP tool schema via MCP or A2A; the tools expose discover, catalog, cart, checkout, book, and aftercare. For assistants that already support Poppy/UCP/ACP, the GCP adapter translates and adds the automotive extensions.
 
+<b>Ecosystem of PA products.</b> A third-party assistant such as Doubao, Tongyi Qianwen/Lingguang, DeepSeek, ChatGPT, Claude/Claude Code, WorkBuddy, QwenWork, or a Xiaohongshu-style shopping assistant can expose GCP tools through its existing MCP/A2A tool layer: the tools are discover, catalog, cart, checkout, book, and aftercare; the host app supplies the step-up UI and the Poppy/OAuth session. The same tool schema is used by an OEM's own mobile/PC assistant and by the cockpit, so a merchant integrates once and reaches every PA channel that supports the protocol. A PA that already speaks UCP or ACP keeps its checkout and calls the GCP adapter only for vehicle/safety/authorization fields; a PA that speaks only Poppy uses GCP for all commerce objects.
+
 <b>OEM apps and cockpit.</b> The OEM mobile/PC app and the cockpit use the same client SDK and authorization vault; the cockpit adds the parked/step-up rules. Dealers and service centers connect through a DMS/ERP adapter; insurers through quote/bind adapters; payment providers through PSP adapters.
 
 ### 6.6 Loading GCP in practice
