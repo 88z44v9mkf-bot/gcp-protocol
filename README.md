@@ -47,11 +47,11 @@ python3 experiments/bench/analyze.py
 
 The gain is concentrated in service (44%→86%) and insurance (13%→82%), where constraints are hidden in ordinary web pages. A calibrated human model gives 68.5–82.7% success and 8–25 minutes per task; it is a model, not human-subject data.
 
-A Stripe test-mode authorization study (180 charges, 180/180 reconciled, USD 71,808 of test money) shows that bounded delegation cuts human approvals by 70% relative to per-transaction approval with no loss of success. A cockpit experiment (192 trajectories) shows that GCP reduces unsafe driving-time purchase attempts from 47.9% to 0% (deferral rises to 81.2%), at the cost of some over-caution when parked. A real aftermarket parts/service-kit catalog (30 tasks, real prices, synthetic compatibility flags) raises success from 26.7% (generic) to 100% (GCP). A real-catalog merchandise check shows no degradation.
+A Stripe test-mode authorization study (180 charges, 180/180 reconciled, USD 71,808 of test money) shows that bounded delegation cuts human approvals by 70% relative to per-transaction approval with no loss of success. A cockpit experiment (24 tasks x 2 states x 2 conditions x 2 models = 192 trajectories) shows that GCP reduces unsafe driving-time purchase attempts from 47.9% to 0% (deferral rises to 81.2%), at the cost of some over-caution when parked (77.1% vs 87.5%). A real aftermarket parts/service-kit catalog (30 tasks, real prices, synthetic compatibility flags) raises success from 26.7% (generic) to 100% (GCP).
 
 ## Paper
 
-`paper/main.pdf` (14 pages). The manuscript is built from `paper/sections/*.md` with `paper/build/build.py`.
+`paper/main.pdf` (19 pages, 12 tables, 5 figures). The manuscript is built from `paper/sections/*.md` with `paper/build/build.py`.
 
 ## License
 

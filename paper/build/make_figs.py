@@ -73,5 +73,71 @@ def results():
     (FIG / "fig_results.svg").write_text("".join(p), encoding="utf-8")
 
 
+def horizons():
+    W, H = 860, 220
+    p = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">', f'<rect width="{W}" height="{H}" fill="#fff"/>']
+    p.append(f'<line x1="60" y1="120" x2="800" y2="120" stroke="{INK}" stroke-width="2"/>')
+    boxes = [(80, "H1: 0–6 months", "assisted: human initiates, agent prepares, human approves"),
+             (330, "H2: 6–18 months", "delegated: mandate, proactive service, exception review"),
+             (580, "H3: 18–36 months", "agent-native: agents negotiate, human audits policy")]
+    for x, title, sub in boxes:
+        p.append(f'<circle cx="{x}" cy="120" r="6" fill="#3d5a80"/>')
+        p.append(f'<text x="{x}" y="90" text-anchor="middle" font-family="{FONT}" font-size="12" font-weight="bold">{title}</text>')
+        words = sub.split(", ")
+        for i, w in enumerate(words):
+            p.append(f'<text x="{x}" y="{150+i*14}" text-anchor="middle" font-family="{FONT}" font-size="9.5" fill="{MUTED}">{w}</text>')
+    p.append("</svg>")
+    (FIG / "fig_horizons.svg").write_text("".join(p), encoding="utf-8")
+
+
+def cockpit():
+    import json
+    rows = [json.loads(l) for l in open(ROOT / "experiments/results/cockpit.jsonl")]
+    keys = [("driving", "generic"), ("driving", "gcp"), ("parked", "generic"), ("parked", "gcp")]
+    labels = ["Drive / generic", "Drive / GCP", "Parked / generic", "Parked / GCP"]
+    vals = []
+    for st, c in keys:
+        rs = [r for r in rows if r["state"] == st and r["condition"] == c]
+        vals.append((sum(r["unsafe"] for r in rs) / len(rs), sum(r["deferred"] for r in rs) / len(rs)))
+    W, H = 760, 300; left, bottom, top = 70, 60, 40; pw, ph = W-left-30, H-bottom-top
+    p = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">', f'<rect width="{W}" height="{H}" fill="#fff"/>']
+    p.append(f'<line x1="{left}" y1="{H-bottom}" x2="{W-30}" y2="{H-bottom}" stroke="{INK}"/>')
+    p.append(f'<line x1="{left}" y1="{top}" x2="{left}" y2="{H-bottom}" stroke="{INK}"/>')
+    for v in range(0, 101, 20):
+        y = H-bottom-v/100*ph; p.append(f'<line x1="{left}" y1="{y}" x2="{W-30}" y2="{y}" stroke="#eee"/>')
+        p.append(f'<text x="{left-8}" y="{y+4}" text-anchor="end" font-family="{FONT}" font-size="10" fill="{MUTED}">{v}%</text>')
+    gw = pw/4; bw = gw*.25
+    for gi, (u, d) in enumerate(vals):
+        cx = left+gw*(gi+.5)
+        p.append(f'<text x="{cx}" y="{H-bottom+18}" text-anchor="middle" font-family="{FONT}" font-size="9.5">{labels[gi]}</text>')
+        for mi, (val, col) in enumerate([(u, "#c26a3a"), (d, "#3d5a80")]):
+            x = cx-bw+mi*(bw+3); y = H-bottom-val*ph
+            p.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{bw:.1f}" height="{H-bottom-y:.1f}" fill="{col}" opacity=".9"/>')
+    p.append("</svg>")
+    (FIG / "fig_cockpit.svg").write_text("".join(p), encoding="utf-8")
+
+
+def realfield():
+    import json
+    rows = [json.loads(l) for l in open(ROOT / "experiments/results/real_parts.jsonl")]
+    conds = ["C1", "C2"]; labels = ["Generic", "GCP"]
+    vals = [sum(r["success"] for r in rows if r["condition"] == c) / max(1, sum(1 for r in rows if r["condition"] == c)) for c in conds]
+    W, H = 600, 300; left, bottom, top = 70, 60, 40; pw, ph = W-left-30, H-bottom-top
+    p = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">', f'<rect width="{W}" height="{H}" fill="#fff"/>']
+    p.append(f'<line x1="{left}" y1="{H-bottom}" x2="{W-30}" y2="{H-bottom}" stroke="{INK}"/>')
+    p.append(f'<line x1="{left}" y1="{top}" x2="{left}" y2="{H-bottom}" stroke="{INK}"/>')
+    for v in range(0, 101, 20):
+        y = H-bottom-v/100*ph; p.append(f'<line x1="{left}" y1="{y}" x2="{W-30}" y2="{y}" stroke="#eee"/>')
+        p.append(f'<text x="{left-8}" y="{y+4}" text-anchor="end" font-family="{FONT}" font-size="10" fill="{MUTED}">{v}%</text>')
+    gw = pw/2; bw = gw*.35
+    for gi, val in enumerate(vals):
+        cx = left+gw*(gi+.5); x = cx-bw/2; y = H-bottom-val*ph
+        p.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{bw:.1f}" height="{H-bottom-y:.1f}" fill="{"#3d5a80" if gi==1 else "#c26a3a"}" opacity=".9"/>')
+        p.append(f'<text x="{cx}" y="{H-bottom+18}" text-anchor="middle" font-family="{FONT}" font-size="10">{labels[gi]}</text>')
+        p.append(f'<text x="{cx}" y="{y-6}" text-anchor="middle" font-family="{FONT}" font-size="10">{val*100:.0f}%</text>')
+    p.append("</svg>")
+    (FIG / "fig_realfield.svg").write_text("".join(p), encoding="utf-8")
+
+
 if __name__ == "__main__":
-    arch(); results(); print("figs ok")
+    arch(); results(); horizons(); cockpit(); realfield(); print("figs ok")

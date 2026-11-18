@@ -45,6 +45,8 @@ GCP is specified for the interaction pattern that is emerging, not only for toda
 
 <b>H3 (18–36 months): agent-native commerce.</b> Multiple agents negotiate on behalf of a household, a fleet, or a small business; agents transact with agents; the human sets policy and audits outcomes. GCP's job in H3 is to make agent-to-agent negotiation, evidence, liability, and settlement first-class, while preserving a human principal at the root of every delegation chain.
 
+[[FIG:figures/fig_horizons.svg|Figure 2. Near-term interaction horizons. All three patterns may overlap within 12–24 months; GCP is layered so that H1 deployments become the policy and evidence layer for H2 and H3.]]
+
 The horizon is deliberately short: model and product capability is moving fast enough that all three patterns may appear within one to two years, with overlap. The protocol is layered so that H1 deployments are not throwaway: the same delegation credential, evidence record, and safety object used for a single purchase in H1 become the policy and audit layer for an autonomous fleet in H3. Table 1 summarizes the interaction shifts and the protocol requirement each shift creates.
 
 <div class="tblwrap"><table><caption>Table 1. Interaction evolution and GCP requirements.</caption>

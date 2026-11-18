@@ -8,7 +8,7 @@ We ran ACB on the full 60-task set with three models and three conditions, givin
 
 <div class="tblwrap"><table><caption>Table 6. ACB results by condition and model (percent unless noted; n=59–60 per cell).</caption><thead><tr><th>Condition</th><th>Model</th><th>Success</th><th>Misbuy</th><th>Recovery</th><th>Steps</th><th>Latency (s)</th></tr></thead><tbody><tr><td>Manual web</td><td>deepseek-v4.1-flash-1017</td><td>65</td><td>35</td><td>59</td><td>1.27</td><td>2.2</td></tr><tr><td>Manual web</td><td>kimi-k3.1-pro</td><td>62</td><td>38</td><td>56</td><td>1.28</td><td>9.0</td></tr><tr><td>Manual web</td><td>qwen3.8-flash</td><td>67</td><td>33</td><td>59</td><td>1.32</td><td>7.8</td></tr><tr><td>Generic agent</td><td>deepseek-v4.1-flash-1017</td><td>63</td><td>37</td><td>59</td><td>1.28</td><td>2.1</td></tr><tr><td>Generic agent</td><td>kimi-k3.1-pro</td><td>70</td><td>30</td><td>59</td><td>1.38</td><td>17.1</td></tr><tr><td>Generic agent</td><td>qwen3.8-flash</td><td>75</td><td>25</td><td>59</td><td>1.43</td><td>10.6</td></tr><tr><td>GCP</td><td>deepseek-v4.1-flash-1017</td><td>83</td><td>17</td><td>78</td><td>1.48</td><td>6.2</td></tr><tr><td>GCP</td><td>kimi-k3.1-pro</td><td>93</td><td>7</td><td>91</td><td>1.50</td><td>23.1</td></tr><tr><td>GCP</td><td>qwen3.8-flash</td><td>100</td><td>0</td><td>100</td><td>1.53</td><td>25.8</td></tr></tbody></table></div>
 
-[[FIG:figures/fig_results.svg|Figure 2. Success and misbuy by condition, averaged over the three models. GCP moves success above 90% and misbuy below 10%; structure without automotive semantics (C1) is close to the manual baseline (C0).]]
+[[FIG:figures/fig_results.svg|Figure 3. Success and misbuy by condition, averaged over the three models. GCP moves success above 90% and misbuy below 10%; structure without automotive semantics (C1) is close to the manual baseline (C0).]]
 
 GCP raises aggregate success from 64.5% (manual web) and 69.4% (generic agent commerce) to 92.2%, and cuts misbuy from 35.5% and 30.6% to 7.8%. The gain is consistent across models: C2 success is 83% for DeepSeek, 93% for Kimi, and 100% for Qwen-Flash. The protocol adds steps (1.29 → 1.50) and latency, but the additional interaction is a validation step, not a human confirmation. C0 and C1 are almost indistinguishable: structure without automotive semantics does not prevent the error.
 
@@ -78,6 +78,8 @@ In-car commerce adds a safety constraint that a mobile or PC assistant does not 
 <tr><td>Parked</td><td>GCP</td><td>0.0</td><td>0.0</td><td>77.1</td></tr>
 </tbody></table></div>
 
+[[FIG:figures/fig_cockpit.svg|Figure 4. Cockpit safety: unsafe purchase/booking attempts (orange) and deferral (blue) by state and condition. GCP eliminates unsafe driving-time actions.]]
+
 The safety effect is large: in the driving state, the generic assistant attempts a purchase or booking in 47.9% of tasks, while GCP eliminates unsafe actions entirely and shifts the agent to deferral (81.2%). The cost is visible in the parked state: GCP success is 77.1% versus 87.5% for the generic condition, because the cockpit rule makes the agent more conservative and it sometimes defers a purchase that could have been completed safely. This is the expected safety-usability trade-off, and it is tunable: the protocol can allow immediate L2 purchases when parked and require only L3+ deferral while moving.
 
 ### 9.10 Real parts and service-kit catalog
@@ -92,5 +94,7 @@ The main benchmark uses synthetic offers. We added a semi-field check on a real 
 <tr><td>C2 GCP</td><td>DeepSeek</td><td>100%</td></tr>
 <tr><td>C2 GCP</td><td>Kimi</td><td>100%</td></tr>
 </tbody></table></div>
+
+[[FIG:figures/fig_realfield.svg|Figure 5. Semi-field on the real aftermarket parts/service-kit catalog: success for generic vs GCP.]]
 
 The real catalog magnifies the protocol effect: C1 succeeds in 26.7% of tasks overall, C2 in 100%. With real product names and prices, the generic agent has no way to see compatibility or merchant authorization, and it frequently chooses the cheaper incompatible or unauthorized option. GCP exposes those fields and the agent chooses correctly. The result is semi-field, not field: the prices are real, the constraints are synthetic. It nevertheless shows that the protocol's value is not an artifact of synthetic pricing.
