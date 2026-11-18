@@ -1,0 +1,110 @@
+{
+ "total": 13,
+ "passed": 13,
+ "results": [
+  {
+   "id": "GCP-L1-01",
+   "pass": true,
+   "status": 200,
+   "expect_status": 200,
+   "code": null,
+   "body": null
+  },
+  {
+   "id": "GCP-L1-02",
+   "pass": true,
+   "status": 200,
+   "expect_status": 200,
+   "code": null,
+   "body": null
+  },
+  {
+   "id": "GCP-L2-01",
+   "pass": true,
+   "status": 200,
+   "expect_status": 200,
+   "code": null,
+   "body": null
+  },
+  {
+   "id": "GCP-L2-02",
+   "pass": true,
+   "status": 200,
+   "expect_status": 200,
+   "code": null,
+   "body": null
+  },
+  {
+   "id": "GCP-L2-03",
+   "pass": true,
+   "status": 201,
+   "expect_status": 201,
+   "code": null,
+   "body": null
+  },
+  {
+   "id": "GCP-L2-04",
+   "pass": true,
+   "status": 200,
+   "expect_status": 200,
+   "code": null,
+   "body": null
+  },
+  {
+   "id": "GCP-L3-01",
+   "pass": true,
+   "status": 200,
+   "expect_status": 200,
+   "code": null,
+   "body": null
+  },
+  {
+   "id": "GCP-L4-01",
+   "pass": true,
+   "status": 409,
+   "expect_status": 409,
+   "code": "SLOT_CONFLICT",
+   "body": null
+  },
+  {
+   "id": "GCP-L3-02",
+   "pass": true,
+   "status": 403,
+   "expect_status": 403,
+   "code": "SCOPE_DENIED",
+   "body": null
+  },
+  {
+   "id": "GCP-L5-01",
+   "pass": true,
+   "status": 403,
+   "expect_status": 403,
+   "code": "SAFETY_BLOCK",
+   "body": null
+  },
+  {
+   "id": "GCP-L5-02",
+   "pass": true,
+   "status": 422,
+   "expect_status": 422,
+   "code": "VEHICLE_INCOMPATIBLE",
+   "body": null
+  },
+  {
+   "id": "GCP-X-01",
+   "pass": true,
+   "status": 401,
+   "expect_status": 401,
+   "code": "CONSENT_EXPIRED",
+   "body": null
+  },
+  {
+   "id": "GCP-X-02",
+   "pass": true,
+   "status": 200,
+   "expect_status": 200,
+   "code": null,
+   "body": null
+  }
+ ]
+}

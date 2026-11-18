@@ -1,0 +1,15 @@
+[
+ {"id":"GCP-L1-01","level":"L1","method":"GET","path":"/.well-known/gcp","auth":"token_read","expect_status":200,"expect_json":{"gcp_version":"1.0"}},
+ {"id":"GCP-L1-02","level":"L1","method":"GET","path":"/gcp/catalog","auth":"token_read","expect_status":200,"expect_json":{"vehicle_id":"veh_001"}},
+ {"id":"GCP-L2-01","level":"L2","method":"POST","path":"/gcp/cart","auth":"token_full","body":{"offer_id":"O1"},"expect_status":200,"save":{"cart_id":"cart_id"}},
+ {"id":"GCP-L2-02","level":"L2","method":"POST","path":"/gcp/checkout/quote","auth":"token_full","body":{"cart_id":"{{cart_id}}"},"expect_status":200,"expect_json":{"offer_id":"O1"}},
+ {"id":"GCP-L2-03","level":"L2","method":"POST","path":"/gcp/checkout/execute","auth":"token_full","headers":{"Idempotency-Key":"idem-1"},"body":{"offer_id":"O1"},"expect_status":201,"save":{"order_id":"order_id"}},
+ {"id":"GCP-L2-04","level":"L2","method":"POST","path":"/gcp/checkout/execute","auth":"token_full","headers":{"Idempotency-Key":"idem-1"},"body":{"offer_id":"O1"},"expect_status":200,"expect_header":{"Idempotent-Replayed":"true"}},
+ {"id":"GCP-L3-01","level":"L3","method":"POST","path":"/gcp/payment/intent","auth":"token_full","body":{"offer_id":"O1","rail":"alipay"},"expect_status":200,"expect_json":{"status":"requires_confirmation"}},
+ {"id":"GCP-L4-01","level":"L4","method":"POST","path":"/gcp/book","auth":"token_full","body":{"offer_id":"O1"},"expect_status":409,"expect_code":"SLOT_CONFLICT"},
+ {"id":"GCP-L3-02","level":"L3","method":"POST","path":"/gcp/payment/intent","auth":"token_read","body":{},"expect_status":403,"expect_code":"SCOPE_DENIED"},
+ {"id":"GCP-L5-01","level":"L5","method":"POST","path":"/gcp/checkout/execute","auth":"token_full","body":{"offer_id":"O3"},"expect_status":403,"expect_code":"SAFETY_BLOCK"},
+ {"id":"GCP-L5-02","level":"L5","method":"POST","path":"/gcp/checkout/execute","auth":"token_full","body":{"offer_id":"O2"},"expect_status":422,"expect_code":"VEHICLE_INCOMPATIBLE"},
+ {"id":"GCP-X-01","level":"all","method":"POST","path":"/gcp/checkout/execute","auth":"token_expired","body":{"offer_id":"O1"},"expect_status":401,"expect_code":"CONSENT_EXPIRED"},
+ {"id":"GCP-X-02","level":"all","method":"GET","path":"/gcp/evidence/ev_demo","auth":"token_read","expect_status":200,"expect_json":{"hash":"sha256:demo"}}
+]

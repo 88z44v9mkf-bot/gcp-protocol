@@ -11,11 +11,21 @@ Poppy, UCP, and ACP solve identity, generic commerce, and agentic checkout. Auto
 ## Contents
 
 ```
-spec/GCP-1.0.md          protocol specification (objects, flows, auth, payments, safety, errors, compatibility)
+spec/GCP-1.0.md          public GCP 1.0 draft (normative language, objects, flows, auth, payments, safety, errors, profiles, conformance)
 paper/                   manuscript sources and compiled PDF
 experiments/bench/       tasks, environment, scorer, LLM runner, human model, analysis
+conformance/             executable conformance suite (13/13 passing) and mock merchant
+fitment/                 VIN -> vehicle -> fitment design, mock service, tests
 experiments/results/     raw runs, summary, figures
 ```
+
+## Specification and conformance
+
+The public draft is `spec/GCP-1.0.md` (RFC 2119 language, conformance levels L1–L5, scopes, error model, profile mappings, governance). The executable suite in `conformance/` starts a mock merchant and runs 13 cases across L1–L5 plus cross-cutting tests; it currently passes 13/13. The runner is intended for merchant CI.
+
+## Fitment
+
+`fitment/README.md` specifies VIN resolution and part/service fitment: data sources and licensing (OEM DMS, ACES/PIES, TecDoc, merchant feeds), tokenized vehicle model, resolution order and confidence, privacy, evaluation metrics, and GCP integration. `fitment/mock_fitment.py` implements the reference API and `fitment/test_fitment.py` covers resolution, unknown VIN, compatible/incompatible parts, and universal accessories.
 
 ## Core design
 
