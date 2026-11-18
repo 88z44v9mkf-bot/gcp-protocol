@@ -61,7 +61,9 @@ A Stripe test-mode authorization study (180 charges, 180/180 reconciled, USD 71,
 
 ## Paper
 
-`paper/main.pdf` (19 pages, 12 tables, 5 figures). The manuscript is built from `paper/sections/*.md` with `paper/build/build.py`.
+`paper/main.pdf` (19 pages, 12 tables, 5 figures).
+
+**Preprint:** Research Square, DOI [10.21203/rs.3.rs-11787193/v1](https://doi.org/10.21203/rs.3.rs-11787193/v1) (submitted 18 November 2026; QA/QC check). The manuscript is built from `paper/sections/*.md` with `paper/build/build.py`.
 
 ## License
 
