@@ -8,9 +8,9 @@ The protocol does not replace ISO 26262, UN R155/R156, or local consumer-protect
 
 ### 5.2 Exception taxonomy and recovery
 
-Real commerce fails in predictable ways. GCP defines a typed error with `retryable`, `requires_human`, `alternatives`, and `evidence_id` (Table 2). The client follows the declared recovery path rather than retrying blindly; a non-retryable error escalates to the human.
+Real commerce fails in predictable ways. GCP defines a typed error with `retryable`, `requires_human`, `alternatives`, and `evidence_id` (Table 3). The client follows the declared recovery path rather than retrying blindly; a non-retryable error escalates to the human.
 
-<div class="tblwrap"><table><caption>Table 2. Selected GCP error codes and default recovery.</caption>
+<div class="tblwrap"><table><caption>Table 3. Selected GCP error codes and default recovery.</caption>
 <thead><tr><th>Code</th><th>Meaning</th><th>Recovery</th></tr></thead>
 <tbody>
 <tr><td>VEHICLE_INCOMPATIBLE</td><td>part/service not valid for VIN</td><td>suggest compatible alternatives</td></tr>

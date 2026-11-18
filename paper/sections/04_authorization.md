@@ -4,7 +4,7 @@
 
 GCP defines five levels of authority (Table 1). The levels are scopes, not prompts: a merchant must reject an action whose scope is absent, and the client must obtain a fresh consent receipt for step-up actions.
 
-<div class="tblwrap"><table><caption>Table 1. GCP authorization ladder.</caption>
+<div class="tblwrap"><table><caption>Table 2. GCP authorization ladder.</caption>
 <thead><tr><th>Level</th><th>Scope</th><th>Typical action</th><th>Human involvement</th></tr></thead>
 <tbody>
 <tr><td>L0</td><td>catalog.read</td><td>browse parts, compare insurance</td><td>none</td></tr>

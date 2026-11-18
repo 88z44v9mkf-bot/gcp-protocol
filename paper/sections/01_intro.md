@@ -4,7 +4,7 @@ A personal agent used to answer questions; it is now expected to buy. The first 
 
 The automotive and mobility problem is not general. A user does not simply buy a product; the user buys <i>a part that must fit a specific vehicle</i>, <i>a service that must be performed by an authorized dealer</i>, <i>an insurance policy that must satisfy underwriting rules</i>, or <i>a vehicle reservation that carries a deposit and a cooling-off period</i>. The catalog is multi-sided (OEM, dealer, aftermarket, insurer), the constraints are safety-critical, the payment rails differ across regions, and the after-sales relationship continues for years. A generic shopping protocol that treats a brake pad as a SKU with a price will produce exactly the errors that make users distrust agents: the wrong part, the unauthorized repair, the insurance that cannot be bound, the deposit that cannot be refunded.
 
-This paper asks a practical question: <b>what must a commerce protocol contain so that a personal agent can act for a human in automotive and mobility commerce, safely, accountably, and across the existing agent ecosystem?</b> We answer with GCP 1.0.
+This paper asks a practical question: <b>what must a commerce protocol contain so that a personal agent can act for a human in automotive and mobility commerce, safely, accountably, and across the existing agent ecosystem?</b> We answer with GCP 1.0 (General Commerce Protocol for Automotive and Mobility), an open specification intended for industry adoption rather than a single OEM.
 
 <b>Contributions.</b>
 <ul>

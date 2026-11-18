@@ -1,0 +1,120 @@
+{"task_id": "S006", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 0.82}
+{"task_id": "S007", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 0.9}
+{"task_id": "S001", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "Stumptown", "price": 20.0, "success": true, "latency_s": 0.97}
+{"task_id": "S004", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 1.0}
+{"task_id": "S003", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "Counter Culture", "price": 20.0, "success": true, "latency_s": 1.04}
+{"task_id": "S005", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 1.05}
+{"task_id": "S002", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 17.0, "success": true, "latency_s": 1.21}
+{"task_id": "S000", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "Intelligentsia", "price": 18.5, "success": true, "latency_s": 1.42}
+{"task_id": "S010", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 17.0, "success": true, "latency_s": 0.74}
+{"task_id": "S009", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "Stumptown", "price": 19.0, "success": true, "latency_s": 0.87}
+{"task_id": "S012", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "Counter Culture", "price": 26.0, "success": true, "latency_s": 0.84}
+{"task_id": "S011", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "Intelligentsia", "price": 24.0, "success": true, "latency_s": 0.97}
+{"task_id": "S008", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "Intelligentsia", "price": 23.0, "success": true, "latency_s": 1.3}
+{"task_id": "S013", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "Counter Culture", "price": 20.0, "success": true, "latency_s": 1.07}
+{"task_id": "S014", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "Stumptown", "price": 20.0, "success": true, "latency_s": 0.93}
+{"task_id": "S015", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 1.04}
+{"task_id": "S016", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 0.96}
+{"task_id": "S017", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "Intelligentsia", "price": 24.0, "success": true, "latency_s": 1.07}
+{"task_id": "S018", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 17.0, "success": true, "latency_s": 1.03}
+{"task_id": "S020", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "Intelligentsia", "price": 21.0, "success": true, "latency_s": 0.87}
+{"task_id": "S019", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 17.0, "success": true, "latency_s": 1.18}
+{"task_id": "S023", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "Counter Culture", "price": 22.0, "success": true, "latency_s": 0.99}
+{"task_id": "S022", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 18.0, "success": true, "latency_s": 1.4}
+{"task_id": "S021", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 1.46}
+{"task_id": "S025", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "Intelligentsia", "price": 22.0, "success": true, "latency_s": 0.86}
+{"task_id": "S026", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 17.0, "success": true, "latency_s": 0.92}
+{"task_id": "S024", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "Counter Culture", "price": 19.0, "success": true, "latency_s": 1.22}
+{"task_id": "S028", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "Stumptown", "price": 20.0, "success": true, "latency_s": 1.05}
+{"task_id": "S027", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "Stumptown", "price": 20.0, "success": true, "latency_s": 1.31}
+{"task_id": "S029", "condition": "C1", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 18.0, "success": true, "latency_s": 1.02}
+{"task_id": "S000", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "Intelligentsia", "price": 18.5, "success": true, "latency_s": 1.03}
+{"task_id": "S001", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "Stumptown", "price": 20.0, "success": true, "latency_s": 1.45}
+{"task_id": "S004", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 1.35}
+{"task_id": "S005", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 1.19}
+{"task_id": "S006", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 1.11}
+{"task_id": "S003", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "Counter Culture", "price": 20.0, "success": true, "latency_s": 1.6}
+{"task_id": "S008", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "Intelligentsia", "price": 23.0, "success": true, "latency_s": 1.21}
+{"task_id": "S002", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 17.0, "success": true, "latency_s": 2.15}
+{"task_id": "S010", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 17.0, "success": true, "latency_s": 1.16}
+{"task_id": "S012", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "Counter Culture", "price": 26.0, "success": true, "latency_s": 1.01}
+{"task_id": "S007", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 2.01}
+{"task_id": "S011", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "Intelligentsia", "price": 24.0, "success": true, "latency_s": 1.11}
+{"task_id": "S009", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "Stumptown", "price": 19.0, "success": true, "latency_s": 1.49}
+{"task_id": "S013", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "Counter Culture", "price": 20.0, "success": true, "latency_s": 1.63}
+{"task_id": "S014", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "Stumptown", "price": 20.0, "success": true, "latency_s": 1.41}
+{"task_id": "S018", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 17.0, "success": true, "latency_s": 1.15}
+{"task_id": "S019", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 17.0, "success": true, "latency_s": 1.14}
+{"task_id": "S016", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 1.27}
+{"task_id": "S017", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "Intelligentsia", "price": 24.0, "success": true, "latency_s": 1.25}
+{"task_id": "S020", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "Intelligentsia", "price": 21.0, "success": true, "latency_s": 1.23}
+{"task_id": "S015", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 2.31}
+{"task_id": "S023", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "Counter Culture", "price": 22.0, "success": true, "latency_s": 1.02}
+{"task_id": "S021", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 1.62}
+{"task_id": "S022", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 18.0, "success": true, "latency_s": 1.53}
+{"task_id": "S024", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "Counter Culture", "price": 19.0, "success": true, "latency_s": 1.1}
+{"task_id": "S026", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 17.0, "success": true, "latency_s": 1.27}
+{"task_id": "S028", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "Stumptown", "price": 20.0, "success": true, "latency_s": 0.96}
+{"task_id": "S027", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "Stumptown", "price": 20.0, "success": true, "latency_s": 1.75}
+{"task_id": "S029", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "La Colombe", "price": 18.0, "success": true, "latency_s": 1.08}
+{"task_id": "S025", "condition": "C2", "model": "deepseek-v4.1-flash-1017", "merchant": "Intelligentsia", "price": 22.0, "success": true, "latency_s": 2.36}
+{"task_id": "S000", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "Intelligentsia", "price": 18.5, "success": true, "latency_s": 2.58}
+{"task_id": "S001", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "Stumptown", "price": 20.0, "success": true, "latency_s": 2.65}
+{"task_id": "S002", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 17.0, "success": true, "latency_s": 2.83}
+{"task_id": "S004", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 2.72}
+{"task_id": "S007", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 2.18}
+{"task_id": "S006", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 2.8}
+{"task_id": "S003", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "Counter Culture", "price": 20.0, "success": true, "latency_s": 3.59}
+{"task_id": "S005", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 3.05}
+{"task_id": "S009", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "Stumptown", "price": 19.0, "success": true, "latency_s": 1.93}
+{"task_id": "S008", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "Intelligentsia", "price": 23.0, "success": true, "latency_s": 2.12}
+{"task_id": "S010", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 17.0, "success": true, "latency_s": 2.53}
+{"task_id": "S013", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "Counter Culture", "price": 20.0, "success": true, "latency_s": 2.04}
+{"task_id": "S012", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "Counter Culture", "price": 26.0, "success": true, "latency_s": 2.51}
+{"task_id": "S014", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "Stumptown", "price": 20.0, "success": true, "latency_s": 2.73}
+{"task_id": "S017", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "Intelligentsia", "price": 24.0, "success": true, "latency_s": 2.3}
+{"task_id": "S016", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 2.45}
+{"task_id": "S011", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "Intelligentsia", "price": 24.0, "success": true, "latency_s": 4.4}
+{"task_id": "S018", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 17.0, "success": true, "latency_s": 2.92}
+{"task_id": "S019", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 17.0, "success": true, "latency_s": 2.75}
+{"task_id": "S020", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "Intelligentsia", "price": 21.0, "success": true, "latency_s": 2.89}
+{"task_id": "S015", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 5.39}
+{"task_id": "S021", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 2.69}
+{"task_id": "S023", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "Counter Culture", "price": 22.0, "success": true, "latency_s": 2.54}
+{"task_id": "S022", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 18.0, "success": true, "latency_s": 2.83}
+{"task_id": "S024", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "Counter Culture", "price": 19.0, "success": true, "latency_s": 2.63}
+{"task_id": "S025", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "Intelligentsia", "price": 22.0, "success": true, "latency_s": 3.1}
+{"task_id": "S027", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "Stumptown", "price": 20.0, "success": true, "latency_s": 3.01}
+{"task_id": "S028", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "Stumptown", "price": 20.0, "success": true, "latency_s": 2.66}
+{"task_id": "S029", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 18.0, "success": true, "latency_s": 2.9}
+{"task_id": "S026", "condition": "C1", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 17.0, "success": true, "latency_s": 3.78}
+{"task_id": "S001", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "Stumptown", "price": 20.0, "success": true, "latency_s": 3.18}
+{"task_id": "S000", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "Intelligentsia", "price": 18.5, "success": true, "latency_s": 4.16}
+{"task_id": "S002", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 17.0, "success": true, "latency_s": 4.13}
+{"task_id": "S004", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 4.17}
+{"task_id": "S003", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "Counter Culture", "price": 20.0, "success": true, "latency_s": 4.76}
+{"task_id": "S005", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 4.34}
+{"task_id": "S006", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 4.7}
+{"task_id": "S008", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "Intelligentsia", "price": 23.0, "success": true, "latency_s": 4.1}
+{"task_id": "S009", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "Stumptown", "price": 19.0, "success": true, "latency_s": 4.47}
+{"task_id": "S007", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 5.95}
+{"task_id": "S010", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 17.0, "success": true, "latency_s": 4.2}
+{"task_id": "S011", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "Intelligentsia", "price": 24.0, "success": true, "latency_s": 4.09}
+{"task_id": "S012", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "Counter Culture", "price": 26.0, "success": true, "latency_s": 4.51}
+{"task_id": "S015", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 4.14}
+{"task_id": "S016", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 3.39}
+{"task_id": "S014", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "Stumptown", "price": 20.0, "success": true, "latency_s": 5.02}
+{"task_id": "S013", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "Counter Culture", "price": 20.0, "success": true, "latency_s": 5.94}
+{"task_id": "S017", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "Intelligentsia", "price": 24.0, "success": true, "latency_s": 4.18}
+{"task_id": "S018", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 17.0, "success": true, "latency_s": 4.98}
+{"task_id": "S019", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 17.0, "success": true, "latency_s": 4.2}
+{"task_id": "S020", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "Intelligentsia", "price": 21.0, "success": true, "latency_s": 3.97}
+{"task_id": "S021", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 16.0, "success": true, "latency_s": 3.96}
+{"task_id": "S022", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 18.0, "success": true, "latency_s": 3.97}
+{"task_id": "S024", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "Counter Culture", "price": 19.0, "success": true, "latency_s": 4.03}
+{"task_id": "S023", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "Counter Culture", "price": 22.0, "success": true, "latency_s": 4.41}
+{"task_id": "S025", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "Intelligentsia", "price": 22.0, "success": true, "latency_s": 5.03}
+{"task_id": "S026", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 17.0, "success": true, "latency_s": 4.4}
+{"task_id": "S027", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "Stumptown", "price": 20.0, "success": true, "latency_s": 4.5}
+{"task_id": "S028", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "Stumptown", "price": 20.0, "success": true, "latency_s": 5.04}
+{"task_id": "S029", "condition": "C2", "model": "kimi-k3.1-pro", "merchant": "La Colombe", "price": 18.0, "success": true, "latency_s": 4.85}

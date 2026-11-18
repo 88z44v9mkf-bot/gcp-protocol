@@ -37,7 +37,7 @@ python3 experiments/bench/runner.py --out experiments/results/acb.jsonl --tasks 
 python3 experiments/bench/analyze.py
 ```
 
-## Results (539 analyzed trajectories, 3 models)
+## Results
 
 | Condition | Success | Misbuy | Recovery |
 |---|---|---|---|
@@ -46,6 +46,8 @@ python3 experiments/bench/analyze.py
 | GCP (C2) | **92.2%** | **7.8%** | **89.6%** |
 
 The gain is concentrated in service (44%→86%) and insurance (13%→82%), where constraints are hidden in ordinary web pages. A calibrated human model gives 68.5–82.7% success and 8–25 minutes per task; it is a model, not human-subject data.
+
+A Stripe test-mode authorization study (180 charges, 180/180 reconciled, USD 71,808 of test money) shows that bounded delegation cuts human approvals by 70% relative to per-transaction approval with no loss of success. A semi-field study on 30 real catalog tasks shows no degradation (100% success in both C1 and C2); it is a non-degradation check, not a discriminating test.
 
 ## Paper
 

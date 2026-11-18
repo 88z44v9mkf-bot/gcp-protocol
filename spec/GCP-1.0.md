@@ -105,7 +105,7 @@ Offer object:
   "title": "Front brake pad set",
   "sku": "BP-1234",
   "price": {"amount": 680, "currency": "CNY", "tax_included": true},
-  "compatibility": {"make": "Geely", "model": "X", "year": [2022, 2026], "vin_pattern": "L6T..."},
+  "compatibility": {"make": "OEM_A", "model": "X", "year": [2022, 2026], "vin_pattern": "L6T..."},
   "safety": {"critical": true, "oem_approved": true, "certifications": ["ECE-R90"], "recall_status": "clear"},
   "warranty": {"months": 24, "scope": "parts_and_labor"},
   "inventory": {"qty": 4, "location": "dealer_001"},

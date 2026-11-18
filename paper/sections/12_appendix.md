@@ -22,7 +22,7 @@
   "offer_id": "part_001",
   "type": "part",
   "price": {"amount": 680, "currency": "CNY"},
-  "compatibility": {"make": "Geely", "model": "X", "year": [2022, 2026]},
+  "compatibility": {"make": "OEM_A", "model": "X", "year": [2022, 2026]},
   "safety": {"critical": true, "oem_approved": true, "certifications": ["ECE-R90"]},
   "inventory": {"qty": 4},
   "merchant_authorized": true
